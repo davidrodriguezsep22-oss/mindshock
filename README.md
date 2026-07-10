@@ -1,28 +1,24 @@
-# MindShock
+# MindShock Business v1.1
 
-Plataforma de asistentes de inteligencia artificial en español para empleo, estudio, productividad y creación de contenido.
+Primera versión orientada a conseguir clientes reales.
 
-## Estructura
+## Qué incluye
 
-- `index.html`: página principal.
-- `assets/css/style.css`: estilos visuales.
-- `assets/js/main.js`: comportamiento del menú móvil.
-- `assets/img/`: imágenes futuras.
-- `assets/icons/`: iconos futuros.
+- Landing page enfocada en el Kit Profesional MindShock.
+- Proceso de servicio.
+- Precio de lanzamiento.
+- Preguntas frecuentes.
+- Política de privacidad.
+- Términos del servicio.
+- Diseño adaptable a celular.
+- Botones directos a WhatsApp.
 
-## Publicación con GitHub Pages
+## Cómo actualizar GitHub
 
-1. Sube todo el contenido de esta carpeta a la raíz del repositorio `mindshock`.
-2. En GitHub abre **Settings**.
-3. Entra en **Pages**.
-4. En **Build and deployment**, elige **Deploy from a branch**.
-5. Selecciona la rama `main` y la carpeta `/ (root)`.
-6. Pulsa **Save**.
+1. Extrae este ZIP.
+2. En el repositorio `mindshock`, entra en **Agregar archivo → Cargar archivos**.
+3. Arrastra todo el contenido de la carpeta extraída.
+4. Confirma que reemplazarás los archivos anteriores.
+5. Pulsa **Confirmar cambios**.
 
-La página quedará disponible en una dirección similar a:
-
-`https://TU-USUARIO.github.io/mindshock/`
-
-## Estado
-
-Beta 2026.
+GitHub Pages actualizará el sitio automáticamente.
