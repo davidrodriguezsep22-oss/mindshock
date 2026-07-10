@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MindShock ayuda a mejorar hojas de vida, LinkedIn, cartas y preparación para entrevistas con apoyo de inteligencia artificial y revisión humana." />
-  <title>MindShock | Empleo, estudio y productividad con IA</title>
+  <meta name="description" content="MindShock mejora tu hoja de vida, LinkedIn y preparación para entrevistas con inteligencia artificial y revisión humana." />
+  <meta property="og:title" content="MindShock | Impulsa tu perfil profesional" />
+  <meta property="og:description" content="Hoja de vida, LinkedIn, carta de presentación y preparación para entrevistas." />
+  <title>MindShock | Impulsa tu perfil profesional</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio">
+      <a class="brand" href="#inicio" aria-label="MindShock inicio">
         <span class="brand-mark">MS</span>
         <span>MindShock</span>
       </a>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
       <div class="nav-links">
-        <a href="#servicio">Servicio</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#precios">Precio</a>
-        <a href="#faq">Preguntas</a>
+        <a href="#solucion">Solución</a>
+        <a href="#demostracion">Demostración</a>
+        <a href="#planes">Planes</a>
+        <a href="#preguntas">Preguntas</a>
         <a class="button button-secondary" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20MindShock" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
@@ -27,186 +31,267 @@
 
   <header id="inicio" class="hero">
     <div class="container hero-grid">
-      <div>
-        <div class="pill">Beta 2026 · Atención personalizada</div>
-        <h1>Presenta mejor tu experiencia y <span class="gradient">consigue más oportunidades.</span></h1>
+      <div class="hero-copy">
+        <div class="pill">Beta 2026 · Atención personalizada en Colombia</div>
+        <h1>Convierte tu experiencia en un perfil que <span class="gradient">sí comunica tu valor.</span></h1>
         <p class="lead">
-          MindShock combina inteligencia artificial con revisión humana para ayudarte a mejorar tu hoja de vida,
+          MindShock combina inteligencia artificial con revisión humana para mejorar tu hoja de vida,
           LinkedIn, carta de presentación y preparación para entrevistas.
         </p>
+
         <div class="hero-actions">
-          <a class="button button-primary" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20empezar%20mi%20proceso%20con%20MindShock" target="_blank" rel="noopener">Empezar por WhatsApp</a>
-          <a class="button button-secondary" href="#como-funciona">Ver cómo funciona</a>
+          <a class="button button-primary" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20una%20revisi%C3%B3n%20de%20mi%20perfil%20profesional" target="_blank" rel="noopener">Solicitar revisión</a>
+          <a class="button button-secondary" href="#demostracion">Ver demostración</a>
         </div>
+
         <div class="trust-row">
+          <span>✓ Revisión humana</span>
           <span>✓ Entrega digital</span>
-          <span>✓ En español</span>
-          <span>✓ Revisión personalizada</span>
+          <span>✓ Una ronda de ajustes</span>
           <span>✓ Sin promesas falsas</span>
         </div>
       </div>
 
-      <div class="preview-card glass">
-        <div class="preview-top">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-        </div>
-        <div class="preview-body">
-          <div class="preview-headline">Tu perfil profesional, mejor presentado.</div>
-          <div class="preview-line long"></div>
-          <div class="preview-line medium"></div>
-          <div class="preview-line short"></div>
-          <div class="preview-grid">
-            <div class="mini-box"><strong>📄 CV</strong><small>Redacción y diseño</small></div>
-            <div class="mini-box"><strong>💼 LinkedIn</strong><small>Perfil optimizado</small></div>
-            <div class="mini-box"><strong>✉️ Carta</strong><small>Presentación laboral</small></div>
-            <div class="mini-box"><strong>🎤 Entrevista</strong><small>Preparación guiada</small></div>
+      <div class="audit-card glass" aria-label="Vista previa de auditoría de perfil">
+        <div class="audit-top">
+          <div>
+            <small>Vista previa</small>
+            <strong>Auditoría de perfil profesional</strong>
           </div>
+          <span class="status">Demo</span>
+        </div>
+
+        <div class="score-wrap">
+          <div class="score-ring"><span>78</span><small>/100</small></div>
+          <div>
+            <h3>Buen punto de partida</h3>
+            <p>Tu experiencia es sólida, pero el mensaje puede ser más claro y orientado a resultados.</p>
+          </div>
+        </div>
+
+        <div class="audit-list">
+          <div><span>Perfil profesional</span><b>Mejorable</b></div>
+          <div><span>Palabras clave</span><b>Medio</b></div>
+          <div><span>Claridad de experiencia</span><b>Alta</b></div>
+          <div><span>Presentación visual</span><b>Mejorable</b></div>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="servicio" class="section">
+    <section id="solucion" class="section">
       <div class="container">
         <div class="section-heading">
-          <div class="kicker">Oferta inicial</div>
-          <h2>Un servicio concreto para resolver un problema real.</h2>
-          <p>MindShock empieza ayudando a personas que buscan empleo y necesitan presentar mejor su experiencia.</p>
+          <div class="kicker">La solución</div>
+          <h2>Todo lo necesario para presentar mejor tu trayectoria.</h2>
+          <p>No se trata de inventar experiencia. Se trata de organizarla, expresarla mejor y adaptarla al tipo de oportunidad que buscas.</p>
         </div>
 
         <div class="cards four">
           <article class="card glass">
             <div class="icon">📄</div>
             <h3>Hoja de vida</h3>
-            <p>Redacción, estructura, diseño y versión lista para enviar en PDF.</p>
+            <p>Redacción, estructura, diseño y versión en PDF lista para postularte.</p>
           </article>
           <article class="card glass">
             <div class="icon">💼</div>
             <h3>LinkedIn</h3>
-            <p>Titular, sección “Acerca de”, experiencia, aptitudes y recomendaciones.</p>
+            <p>Titular, “Acerca de”, experiencia, aptitudes y palabras clave.</p>
           </article>
           <article class="card glass">
             <div class="icon">✉️</div>
             <h3>Carta de presentación</h3>
-            <p>Texto adaptable para postulaciones, correos y contactos profesionales.</p>
+            <p>Texto adaptable para correos, convocatorias y contactos profesionales.</p>
           </article>
           <article class="card glass">
             <div class="icon">🎤</div>
-            <h3>Preparación de entrevista</h3>
-            <p>Preguntas frecuentes, respuestas sugeridas y guía de práctica.</p>
+            <h3>Entrevista</h3>
+            <p>Preguntas frecuentes, respuestas sugeridas y plan de práctica.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="como-funciona" class="section alt">
+    <section id="demostracion" class="section alt">
       <div class="container">
         <div class="section-heading">
-          <div class="kicker">Proceso simple</div>
-          <h2>Así funciona MindShock.</h2>
+          <div class="kicker">Demostración interactiva</div>
+          <h2>Haz una revisión rápida de tu perfil.</h2>
+          <p>Esta herramienta es una demostración orientativa. No reemplaza una revisión profesional completa.</p>
         </div>
+
+        <div class="demo-grid">
+          <form class="demo-form glass" id="profileForm">
+            <label>
+              Años de experiencia
+              <select id="experience">
+                <option value="0">Menos de 1 año</option>
+                <option value="1">1 a 3 años</option>
+                <option value="2">4 a 7 años</option>
+                <option value="3">8 años o más</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Tu hoja de vida está actualizada?
+              <select id="updated">
+                <option value="0">No</option>
+                <option value="1">Parcialmente</option>
+                <option value="2">Sí</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Tu LinkedIn está completo?
+              <select id="linkedin">
+                <option value="0">No tengo o está incompleto</option>
+                <option value="1">Parcialmente</option>
+                <option value="2">Sí, está completo</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Tienes un cargo objetivo definido?
+              <select id="target">
+                <option value="0">No</option>
+                <option value="1">Más o menos</option>
+                <option value="2">Sí</option>
+              </select>
+            </label>
+
+            <button class="button button-primary full" type="submit">Calcular revisión rápida</button>
+          </form>
+
+          <div class="demo-result glass">
+            <div class="result-empty" id="resultEmpty">
+              <div class="result-icon">✦</div>
+              <h3>Tu resultado aparecerá aquí</h3>
+              <p>Completa las cuatro preguntas para obtener una orientación inicial.</p>
+            </div>
+
+            <div class="result-content hidden" id="resultContent">
+              <div class="result-score" id="resultScore">0</div>
+              <h3 id="resultTitle">Resultado</h3>
+              <p id="resultText"></p>
+              <ul id="resultTips"></ul>
+              <a class="button button-secondary full" id="resultWhatsapp" href="#" target="_blank" rel="noopener">Pedir revisión personalizada</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Cómo funciona</div>
+          <h2>Un proceso sencillo y transparente.</h2>
+        </div>
+
         <div class="steps">
-          <article class="step">
-            <span>01</span>
-            <h3>Nos escribes</h3>
-            <p>Nos cuentas qué necesitas y compartes tu información laboral.</p>
+          <article class="step"><span>01</span><h3>Nos escribes</h3><p>Nos cuentas qué buscas y compartes la información necesaria.</p></article>
+          <article class="step"><span>02</span><h3>Diagnosticamos</h3><p>Revisamos claridad, estructura, fortalezas y puntos de mejora.</p></article>
+          <article class="step"><span>03</span><h3>Preparamos</h3><p>Usamos IA como apoyo y revisamos manualmente cada entrega.</p></article>
+          <article class="step"><span>04</span><h3>Ajustamos</h3><p>Recibes los archivos y realizamos una ronda de correcciones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planes" class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Planes beta</div>
+          <h2>Empieza por lo que realmente necesitas.</h2>
+          <p>Precios de lanzamiento sujetos a disponibilidad durante la fase beta.</p>
+        </div>
+
+        <div class="pricing-cards">
+          <article class="plan glass">
+            <div class="plan-name">Revisión inicial</div>
+            <div class="plan-price">Gratis</div>
+            <p>Orientación breve por WhatsApp para definir qué servicio necesitas.</p>
+            <ul>
+              <li>Revisión general</li>
+              <li>Recomendación de siguiente paso</li>
+              <li>Sin entrega de documentos</li>
+            </ul>
+            <a class="button button-secondary full" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20una%20revisi%C3%B3n%20inicial%20gratuita" target="_blank" rel="noopener">Solicitar revisión</a>
           </article>
-          <article class="step">
-            <span>02</span>
-            <h3>Revisamos tu perfil</h3>
-            <p>Organizamos tu experiencia y detectamos qué debe fortalecerse.</p>
+
+          <article class="plan featured">
+            <div class="popular">Más completo</div>
+            <div class="plan-name">Kit Profesional</div>
+            <div class="plan-price">$29.900 <span>COP</span></div>
+            <p>El paquete inicial para mejorar tu presentación profesional.</p>
+            <ul>
+              <li>Hoja de vida en PDF</li>
+              <li>Texto para LinkedIn</li>
+              <li>Carta de presentación</li>
+              <li>Guía de entrevista</li>
+              <li>Una ronda de ajustes</li>
+            </ul>
+            <a class="button button-primary full" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20comprar%20el%20Kit%20Profesional%20MindShock" target="_blank" rel="noopener">Solicitar el kit</a>
           </article>
-          <article class="step">
-            <span>03</span>
-            <h3>Preparamos los documentos</h3>
-            <p>Usamos IA como apoyo y revisamos manualmente cada entrega.</p>
-          </article>
-          <article class="step">
-            <span>04</span>
-            <h3>Recibes y corriges</h3>
-            <p>Te enviamos la versión digital y hacemos una ronda de ajustes.</p>
+
+          <article class="plan glass">
+            <div class="plan-name">Servicio personalizado</div>
+            <div class="plan-price">A convenir</div>
+            <p>Para necesidades específicas o documentos adicionales.</p>
+            <ul>
+              <li>Diagnóstico detallado</li>
+              <li>Alcance personalizado</li>
+              <li>Precio definido antes de iniciar</li>
+            </ul>
+            <a class="button button-secondary full" href="https://wa.me/573022805656?text=Hola%2C%20necesito%20un%20servicio%20personalizado%20de%20MindShock" target="_blank" rel="noopener">Consultar</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="precios" class="section">
-      <div class="container pricing-grid">
-        <div class="pricing-copy">
-          <div class="kicker">Precio de lanzamiento</div>
-          <h2>Kit Profesional MindShock</h2>
-          <p class="lead">
-            Una oferta inicial para validar el servicio, conseguir los primeros clientes
-            y financiar el crecimiento de la futura plataforma.
-          </p>
-          <ul class="check-list">
-            <li>Hoja de vida profesional en PDF.</li>
-            <li>Texto optimizado para LinkedIn.</li>
-            <li>Carta de presentación.</li>
-            <li>Guía de preparación para entrevista.</li>
-            <li>Una ronda de ajustes.</li>
-          </ul>
-        </div>
-
-        <div class="price-card">
-          <div class="price-label">Lanzamiento beta</div>
-          <div class="price">$29.900 <span>COP</span></div>
-          <p>Pago por Nequi o transferencia. Entrega digital.</p>
-          <a class="button button-primary full" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20comprar%20el%20Kit%20Profesional%20MindShock" target="_blank" rel="noopener">Solicitar el kit</a>
-          <small>No se garantiza contratación ni entrevista. El servicio mejora la presentación profesional.</small>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
+    <section class="section">
       <div class="container split">
         <div class="glass panel">
-          <div class="kicker">Por qué confiar</div>
-          <h2>Un proyecto honesto desde el principio.</h2>
-          <p>
-            MindShock no inventa cifras, testimonios ni resultados. La primera etapa consiste en atender clientes reales,
-            aprender de sus necesidades y construir una solución mejor con cada entrega.
-          </p>
+          <div class="kicker">Confianza</div>
+          <h2>Sin testimonios inventados ni garantías irreales.</h2>
+          <p>MindShock está en fase beta. Los resultados reales se documentarán únicamente con autorización de los clientes.</p>
         </div>
+
         <div class="glass panel">
-          <div class="kicker">Visión</div>
-          <h2>De servicio personalizado a plataforma.</h2>
-          <p>
-            Los primeros ingresos se reinvertirán en dominio, herramientas, automatización y desarrollo de asistentes
-            para empleo, estudio, documentos y productividad.
-          </p>
+          <div class="kicker">Crecimiento</div>
+          <h2>Los primeros ingresos financiarán el dominio y la plataforma.</h2>
+          <p>El objetivo es reinvertir en herramientas, automatización, pagos y asistentes especializados.</p>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="preguntas" class="section alt">
       <div class="container">
         <div class="section-heading">
           <div class="kicker">Preguntas frecuentes</div>
-          <h2>Lo que debes saber antes de empezar.</h2>
+          <h2>Información clara antes de contratar.</h2>
         </div>
 
         <div class="faq">
           <details>
-            <summary>¿MindShock consigue empleo por mí?</summary>
-            <p>No. MindShock mejora tu presentación profesional y te ayuda a prepararte, pero ninguna contratación está garantizada.</p>
+            <summary>¿MindShock garantiza que conseguiré empleo?</summary>
+            <p>No. Mejoramos tu presentación y preparación, pero ninguna entrevista o contratación puede garantizarse.</p>
           </details>
           <details>
             <summary>¿La inteligencia artificial hace todo?</summary>
-            <p>No. La IA se usa como herramienta de apoyo. Cada texto se revisa y se adapta antes de entregarlo.</p>
+            <p>No. La IA sirve como apoyo. El contenido se revisa y adapta antes de la entrega.</p>
           </details>
           <details>
             <summary>¿Cómo recibo los archivos?</summary>
-            <p>La entrega se realiza digitalmente por WhatsApp o correo electrónico, según lo acordado.</p>
+            <p>Por WhatsApp o correo electrónico, según lo acordado.</p>
           </details>
           <details>
-            <summary>¿Puedo pedir cambios?</summary>
-            <p>Sí. El precio inicial incluye una ronda de ajustes sobre el material entregado.</p>
+            <summary>¿Puedo solicitar cambios?</summary>
+            <p>El Kit Profesional incluye una ronda de ajustes sobre los documentos entregados.</p>
           </details>
           <details>
-            <summary>¿Cómo pago?</summary>
-            <p>Durante la beta, el pago se coordina por Nequi o transferencia bancaria.</p>
+            <summary>¿Cómo pago durante la beta?</summary>
+            <p>Por Nequi o transferencia bancaria, después de acordar el alcance del servicio.</p>
           </details>
         </div>
       </div>
@@ -214,9 +299,12 @@
 
     <section class="section">
       <div class="container cta">
-        <h2>El primer objetivo no es parecer una gran empresa. Es ayudar bien al primer cliente.</h2>
-        <p>Escríbenos, cuéntanos qué necesitas y revisamos si el servicio encaja contigo.</p>
-        <a class="button button-primary" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20hablar%20sobre%20el%20servicio%20de%20MindShock" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        <div>
+          <div class="kicker">Primer paso</div>
+          <h2>Revisemos si MindShock puede ayudarte.</h2>
+          <p>Cuéntanos qué empleo buscas y qué documentos tienes actualmente.</p>
+        </div>
+        <a class="button button-primary" href="https://wa.me/573022805656?text=Hola%2C%20quiero%20revisar%20mi%20perfil%20profesional%20con%20MindShock" target="_blank" rel="noopener">Escribir por WhatsApp</a>
       </div>
     </section>
   </main>
