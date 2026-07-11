@@ -37,3 +37,12 @@ PASOS PARA PUBLICAR
 3. Reemplaza los archivos anteriores.
 4. Confirma los cambios.
 5. Espera unos minutos y abre https://mindshock.app
+
+
+CORRECCIÓN DE FOTO DEL FUNDADOR
+- La foto ahora usa un círculo real con proporción 1:1.
+- Se eliminó la apariencia ovalada y alargada.
+- El rostro queda centrado.
+- Tamaño máximo en portátil: 420 px.
+- Tamaño máximo en celular: 260 px.
+- Se añadieron versiones en los enlaces de CSS, JavaScript e imagen para evitar que el navegador muestre archivos antiguos guardados en caché.
