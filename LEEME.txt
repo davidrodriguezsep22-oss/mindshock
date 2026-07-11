@@ -1,0 +1,24 @@
+MINDShock WEB OPTIMIZADA
+========================
+
+Esta carpeta está lista para subir a GitHub Pages.
+
+Archivos principales:
+- index.html
+- privacidad.html
+- terminos.html
+- assets/styles.css
+- assets/script.js
+- assets/producto-mindshock.png
+
+Cambios incluidos:
+- Botón de pago Bold con el enlace corregido.
+- Precio unificado en $29.900 COP.
+- Diseño adaptable a celular, tableta y computador.
+- Sección de preguntas frecuentes actualizada.
+- Formulario que abre WhatsApp con la información del cliente.
+- Páginas de privacidad y términos.
+- Mejoras de estructura, llamadas a la acción y confianza.
+
+Enlace Bold:
+https://checkout.bold.co/payment/LNK_IJMERGI2UL
