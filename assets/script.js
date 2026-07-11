@@ -6,6 +6,7 @@ if(toggle&&menu){
     const open=menu.classList.toggle('open');
     toggle.setAttribute('aria-expanded',String(open));
   });
+
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
     menu.classList.remove('open');
     toggle.setAttribute('aria-expanded','false');
@@ -22,9 +23,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
 }));
 
 const leadForm=document.getElementById('leadForm');
+
 if(leadForm){
   leadForm.addEventListener('submit',event=>{
     event.preventDefault();
+
     const name=document.getElementById('leadName').value.trim();
     const country=document.getElementById('leadCountry').value;
     const service=document.getElementById('leadService').value;

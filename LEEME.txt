@@ -1,24 +1,39 @@
-MINDShock WEB OPTIMIZADA
-========================
+MINDSHOCK — VERSIÓN DEFINITIVA
+==============================
 
 Esta carpeta está lista para subir a GitHub Pages.
 
-Archivos principales:
+ARCHIVOS PRINCIPALES
 - index.html
 - privacidad.html
 - terminos.html
 - assets/styles.css
 - assets/script.js
-- assets/producto-mindshock.png
+- assets/david-rodriguez.webp
+- assets/kit-mindshock.webp
+- assets/favicon.svg
 
-Cambios incluidos:
-- Botón de pago Bold con el enlace corregido.
-- Precio unificado en $29.900 COP.
+MEJORAS INCLUIDAS
+- Foto de Germán David Rodríguez incluida.
+- Imagen del Kit Profesional.
+- Botón de pago Bold con valor de $29.900 COP.
+- Botones directos de WhatsApp.
 - Diseño adaptable a celular, tableta y computador.
-- Sección de preguntas frecuentes actualizada.
-- Formulario que abre WhatsApp con la información del cliente.
-- Páginas de privacidad y términos.
-- Mejoras de estructura, llamadas a la acción y confianza.
+- Sección del fundador.
+- Preguntas frecuentes.
+- Formulario que prepara el mensaje de WhatsApp.
+- Política de privacidad y términos.
+- SEO básico y datos estructurados.
+- Mejoras de accesibilidad, velocidad y jerarquía visual.
+- Botón flotante de WhatsApp.
+- Mensajes de confianza antes del pago.
 
-Enlace Bold:
+ENLACE DE PAGO BOLD
 https://checkout.bold.co/payment/LNK_IJMERGI2UL
+
+PASOS PARA PUBLICAR
+1. Descomprime el ZIP.
+2. Sube el contenido completo a la raíz del repositorio mindshock.
+3. Reemplaza los archivos anteriores.
+4. Confirma los cambios.
+5. Espera unos minutos y abre https://mindshock.app
