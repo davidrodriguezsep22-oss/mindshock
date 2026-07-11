@@ -1,6 +1,6 @@
 # MindShock — versión final para publicación
 
-Esta carpeta contiene la versión profesional lista para publicar en:
+Esta carpeta contiene la versión profesional para Colombia y Latinoamérica, lista para publicar en:
 
 https://mindshock.app
 
@@ -46,3 +46,12 @@ Antes de promocionar el sitio, comprueba:
 
 La página no promete empleo ni resultados específicos. La inteligencia artificial
 se presenta como apoyo y todas las entregas requieren revisión humana.
+
+
+## Mejoras de esta versión
+
+- Posicionamiento para profesionales hispanohablantes de Latinoamérica.
+- Adaptación de documentos según país y cargo objetivo.
+- Formulario que prepara una solicitud y abre WhatsApp.
+- Información de pagos para Colombia y otros países.
+- Nueva sección regional y preguntas frecuentes internacionales.
