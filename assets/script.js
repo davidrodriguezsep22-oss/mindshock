@@ -12,12 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("leadName").value.trim();
     const country = document.getElementById("leadCountry").value;
     const service = document.getElementById("leadService").value;
+    const cvStatus = document.getElementById("leadCvStatus").value;
     const role = document.getElementById("leadRole").value.trim();
 
     const message = [
       `Hola MindShock, mi nombre es ${name}.`,
       `Busco empleo en: ${country}.`,
       `Me interesa: ${service}.`,
+      `Estado de mi hoja de vida: ${cvStatus}.`,
       role ? `Mi cargo o área objetivo es: ${role}.` : "",
       "Quiero conocer el alcance, precio y tiempo de entrega."
     ].filter(Boolean).join("\n");

@@ -55,3 +55,15 @@ se presenta como apoyo y todas las entregas requieren revisión humana.
 - Formulario que prepara una solicitud y abre WhatsApp.
 - Información de pagos para Colombia y otros países.
 - Nueva sección regional y preguntas frecuentes internacionales.
+
+
+## Optimización para hispanohablantes
+
+- Titular centrado en el beneficio.
+- Alcance para mercados hispanohablantes, incluida España y el mercado hispano de Estados Unidos.
+- Precio internacional orientativo desde USD 12.
+- Entregables definidos: PDF, versión editable, LinkedIn, carta y guía escrita de entrevista.
+- Formulario con país, servicio, estado de la hoja de vida y cargo objetivo.
+- Ajustes unificados a siete días calendario.
+- Política de conservación de archivos de hasta 30 días.
+- Presentación real del fundador.

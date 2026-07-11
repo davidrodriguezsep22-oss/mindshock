@@ -29,3 +29,14 @@
 
 La versión está preparada para publicación en GitHub Pages y uso con el dominio
 `mindshock.app`.
+
+## Comprobaciones de la versión para hispanohablantes
+- OK: Titular optimizado
+- OK: Hispanohablantes
+- OK: Precio internacional
+- OK: Versión editable
+- OK: Estado del CV
+- OK: Ajustes 7 días
+- OK: Fundador
+- OK: Conservación 30 días
+- OK: CNAME
