@@ -1,27 +1,48 @@
-# MindShock V2
+# MindShock — versión final para publicación
 
-Versión enfocada en convertir visitantes en clientes reales.
+Esta carpeta contiene la versión profesional lista para publicar en:
 
-## Mejoras principales
+https://mindshock.app
 
-- Mensaje de valor más claro.
-- Demostración interactiva de revisión de perfil.
-- Tres planes beta.
-- Vista previa de auditoría profesional.
-- Secciones de confianza, proceso y preguntas frecuentes.
-- Política de privacidad y términos actualizados.
-- Diseño adaptable a portátil y celular.
-- Botones de WhatsApp con mensajes personalizados.
+## Contenido
 
-## Cómo actualizar GitHub
+- `index.html`: página principal.
+- `privacidad.html`: política de privacidad.
+- `terminos.html`: términos del servicio.
+- `404.html`: página para enlaces inexistentes.
+- `CNAME`: conecta GitHub Pages con `mindshock.app`.
+- `robots.txt`: instrucciones para buscadores.
+- `sitemap.xml`: mapa del sitio para Google.
+- `assets/`: estilos, JavaScript, favicon, imagen social y foto del fundador.
 
-1. Extrae este ZIP.
-2. En el repositorio `mindshock`, entra a **Agregar archivo → Cargar archivos**.
-3. Arrastra todo el contenido extraído.
-4. Los archivos con el mismo nombre se reemplazarán.
-5. Pulsa **Confirmar cambios**.
-6. Espera unos minutos y actualiza GitHub Pages con `Ctrl + F5`.
+## Contactos configurados
+
+- WhatsApp: +57 302 280 5656
+- Correo: ventas@mindshock.app
+- Dominio: mindshock.app
+
+## Cómo publicar en GitHub
+
+1. Extrae el ZIP.
+2. Abre tu repositorio `mindshock`.
+3. Selecciona **Agregar archivo → Cargar archivos**.
+4. Arrastra todo el contenido extraído, no el ZIP.
+5. Confirma los cambios.
+6. Espera unos minutos y abre `https://mindshock.app`.
+7. Pulsa `Ctrl + F5` si el navegador muestra una versión anterior.
+
+## Verificación funcional
+
+Antes de promocionar el sitio, comprueba:
+
+- Menú: Servicios, Cómo funciona, Precio y Preguntas.
+- Todos los botones de WhatsApp.
+- Botones de correo a `ventas@mindshock.app`.
+- Privacidad y Términos.
+- Visualización en celular y portátil.
+- HTTPS activo.
 
 ## Nota
 
-La demostración funciona en el navegador y no recopila ni almacena datos.
+La página no promete empleo ni resultados específicos. La inteligencia artificial
+se presenta como apoyo y todas las entregas requieren revisión humana.
