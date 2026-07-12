@@ -142,3 +142,69 @@
     font-size:.88rem;
   }
 }
+
+
+/* Cobertura internacional y selector buscable */
+.global-note{
+  display:grid;
+  gap:4px;
+  margin-top:24px;
+  padding:17px 18px;
+  border-radius:17px;
+  background:rgba(34,211,238,.06);
+  border:1px solid rgba(34,211,238,.16);
+}
+.global-note strong{color:#e8fbff}
+.global-note span{color:#aebdd3}
+.field-help{
+  display:block;
+  margin-top:-4px;
+  color:#93a4bc;
+  font-weight:400;
+}
+.conditional-field{
+  display:grid;
+  gap:10px;
+}
+.conditional-field[hidden]{display:none!important}
+.country-tags span:last-child{
+  background:rgba(34,197,94,.10);
+  border-color:rgba(74,222,128,.22);
+  color:#c7f9d5;
+}
+@media(max-width:620px){
+  .country-tags{
+    gap:8px;
+  }
+  .country-tags span{
+    font-size:.84rem;
+    padding:7px 10px;
+  }
+  .global-note{
+    margin-top:18px;
+    padding:15px;
+  }
+}
+
+
+/* Pago internacional con PayPal */
+.payment-button-paypal{
+  margin-top:12px;
+  background:linear-gradient(135deg,#0070ba,#003087);
+  box-shadow:0 16px 38px rgba(0,48,135,.26);
+}
+.payment-button-paypal:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.06);
+}
+.international-payment-note{
+  margin-top:10px;
+  color:#aebdd3;
+  font-size:.9rem;
+  line-height:1.5;
+}
+@media(max-width:620px){
+  .payment-button-paypal{
+    font-size:.95rem;
+  }
+}

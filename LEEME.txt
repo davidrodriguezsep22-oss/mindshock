@@ -54,3 +54,20 @@ ACTUALIZACIÓN
 
 GOOGLE ANALYTICS
 - Se instaló Google Analytics 4 con el ID G-BW5HF0N1H9 en todas las páginas HTML.
+
+
+ACTUALIZACIÓN GLOBAL
+- Servicio presentado para hispanohablantes en cualquier país del mundo.
+- Campo de país buscable con países de América, Europa, Asia, África y Oceanía.
+- Opción para escribir territorios o regiones no listadas.
+- Mensajes de pago diferenciados para Colombia y otros países.
+- Eventos de Google Analytics para clics en Bold, WhatsApp, correo y envío del formulario.
+- Política de privacidad actualizada con analítica web y cobertura internacional.
+- SEO y datos estructurados actualizados con cobertura mundial e idioma español.
+
+
+PAGO INTERNACIONAL
+- Se agregó PayPal para clientes fuera de Colombia.
+- Precio internacional: USD 9.
+- Enlace: https://www.paypal.com/ncp/payment/GA37QA86DNT8S
+- Google Analytics registra clics con el evento paypal_click.
