@@ -46,3 +46,7 @@ CORRECCIÓN DE FOTO DEL FUNDADOR
 - Tamaño máximo en portátil: 420 px.
 - Tamaño máximo en celular: 260 px.
 - Se añadieron versiones en los enlaces de CSS, JavaScript e imagen para evitar que el navegador muestre archivos antiguos guardados en caché.
+
+
+ACTUALIZACIÓN
+- Se agregó una franja visible con “1 compra confirmada” y “Primer cliente atendido con éxito”.

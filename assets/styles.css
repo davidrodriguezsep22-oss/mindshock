@@ -82,3 +82,63 @@
     gap:28px;
   }
 }
+
+
+/* Compra confirmada: prueba social visible y honesta */
+.purchase-proof{
+  background:linear-gradient(90deg,rgba(34,197,94,.10),rgba(34,211,238,.07));
+  border-top:1px solid rgba(74,222,128,.18);
+  border-bottom:1px solid rgba(74,222,128,.18);
+}
+.purchase-proof-inner{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  text-align:left;
+}
+.purchase-proof-icon{
+  width:48px;
+  height:48px;
+  flex:0 0 48px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:linear-gradient(135deg,#16a34a,#22c55e);
+  color:#fff;
+  font-size:1.45rem;
+  font-weight:900;
+  box-shadow:0 12px 32px rgba(34,197,94,.24);
+}
+.purchase-proof strong,
+.purchase-proof span{
+  display:block;
+}
+.purchase-proof strong{
+  color:#f3fff7;
+  font-size:1.1rem;
+  line-height:1.2;
+}
+.purchase-proof span{
+  margin-top:3px;
+  color:#b9d8c4;
+  font-size:.94rem;
+}
+@media(max-width:620px){
+  .purchase-proof-inner{
+    min-height:84px;
+    justify-content:flex-start;
+  }
+  .purchase-proof-icon{
+    width:42px;
+    height:42px;
+    flex-basis:42px;
+  }
+  .purchase-proof strong{
+    font-size:1rem;
+  }
+  .purchase-proof span{
+    font-size:.88rem;
+  }
+}
