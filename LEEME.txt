@@ -50,3 +50,7 @@ CORRECCIÓN DE FOTO DEL FUNDADOR
 
 ACTUALIZACIÓN
 - Se agregó una franja visible con “1 compra confirmada” y “Primer cliente atendido con éxito”.
+
+
+GOOGLE ANALYTICS
+- Se instaló Google Analytics 4 con el ID G-BW5HF0N1H9 en todas las páginas HTML.
