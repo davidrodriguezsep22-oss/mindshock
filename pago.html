@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pago seguro | MindShock</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0b1020">
+  <style>
+    :root{--ink:#0b1020;--muted:#5c6472;--paper:#f7f5ef;--white:#fff;--blue:#1248f5;--green:#08704f;--red:#b42318;--line:#d9dde5;--soft:#eef3ff}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;display:grid;place-items:center;padding:28px}
+    .shell{width:min(100%,760px);background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 70px rgba(14,23,49,.13);overflow:hidden}
+    header{padding:25px 30px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:25px;font-weight:800;letter-spacing:-1px}.badge{background:#e7f8ef;color:var(--green);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    main{padding:35px 30px 30px}h1{font-family:Georgia,serif;font-size:clamp(36px,7vw,56px);font-weight:400;letter-spacing:-2px;line-height:1;margin:0 0 16px}
+    .lead{color:var(--muted);font-size:17px;line-height:1.65;margin:0 0 28px}
+    .summary{border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:25px}.row{display:flex;justify-content:space-between;gap:20px;padding:9px 0;border-bottom:1px solid #eceef2}.row:last-child{border-bottom:0}.row span{color:var(--muted)}.row strong{text-align:right}.total{font-size:21px}
+    .notice{padding:16px;border-radius:10px;background:var(--soft);color:#243c77;line-height:1.55;margin:0 0 24px;font-size:14px}
+    #paypal-button-container{min-height:48px}.message{display:none;margin-top:22px;border-radius:11px;padding:17px;line-height:1.55}.message.show{display:block}.message.info{background:var(--soft);color:#243c77}.message.success{background:#e7f8ef;color:var(--green)}.message.error{background:#feeceb;color:var(--red)}
+    .reference{display:block;margin-top:10px;font-family:monospace;font-size:12px;overflow-wrap:anywhere}
+    footer{border-top:1px solid var(--line);padding:20px 30px;color:var(--muted);font-size:12px;line-height:1.55}
+    @media(max-width:560px){body{padding:0;background:#fff}.shell{border:0;border-radius:0;box-shadow:none;min-height:100vh}header,main,footer{padding-left:21px;padding-right:21px}.row{align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><div class="brand">MindShock.</div><div class="badge">Pago seguro</div></header>
+    <main>
+      <h1>Completa tu piloto.</h1>
+      <p class="lead">Este enlace fue generado para una solicitud aprobada. El pago se procesa directamente mediante PayPal.</p>
+      <div class="summary">
+        <div class="row"><span>Cliente</span><strong id="customerName">Verificando…</strong></div>
+        <div class="row"><span>Agencia</span><strong id="agencyName">Verificando…</strong></div>
+        <div class="row"><span>Servicio</span><strong>Piloto MindShock, 2 semanas</strong></div>
+        <div class="row"><span>Alcance</span><strong>1 marca · hasta 10 borradores</strong></div>
+        <div class="row total"><span>Total</span><strong id="totalAmount">US$49.00</strong></div>
+      </div>
+      <p class="notice">No compartas este enlace. MindShock no recibe ni almacena tu contraseña ni los datos completos de tu método de pago.</p>
+      <div id="paypal-button-container"></div>
+      <div id="result" class="message" role="status" aria-live="polite"></div>
+    </main>
+    <footer>El servicio se activa después de que PayPal confirme la captura. Conserva la referencia mostrada al finalizar.</footer>
+  </div>
+
+<script>
+(() => {
+  const BASE = "https://zssjhpogljzxvfukesgf.supabase.co/functions/v1";
+  const params = new URLSearchParams(location.search);
+  const applicationId = params.get("application") || "";
+  const token = params.get("token") || "";
+  const result = document.getElementById("result");
+  const container = document.getElementById("paypal-button-container");
+
+  function show(text, type = "info", ref = "") {
+    result.className = `message show ${type}`;
+    result.innerHTML = `<strong>${text}</strong>${ref ? `<span class="reference">${ref}</span>` : ""}`;
+  }
+  function errorText(code) {
+    return ({
+      invalid_payment_link: "El enlace no es válido.",
+      payment_link_expired: "El enlace de pago venció.",
+      application_not_payable: "La solicitud no está disponible para pago.",
+      already_paid: "Este piloto ya aparece como pagado.",
+      live_not_configured: "Los pagos reales todavía no están activados.",
+      paypal_live_credentials_invalid: "La configuración de PayPal Live necesita revisión.",
+      paypal_create_failed: "PayPal no pudo crear la orden.",
+      paypal_capture_failed: "PayPal no pudo confirmar el pago.",
+      payment_validation_failed: "La confirmación no coincide con el importe esperado.",
+      payment_not_completed: "PayPal aún no confirmó el pago."
+    })[code] || "No se pudo completar el proceso.";
+  }
+
+  async function start() {
+    if (!applicationId || token.length < 30) {
+      show("El enlace está incompleto o no es válido.", "error");
+      return;
+    }
+
+    let response, config;
+    try {
+      response = await fetch(`${BASE}/paypal-live-config`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({applicationId, token})
+      });
+      config = await response.json();
+    } catch {
+      show("No se pudo verificar el enlace. Inténtalo nuevamente.", "error");
+      return;
+    }
+
+    document.getElementById("customerName").textContent = config.customerName || "Cliente aprobado";
+    document.getElementById("agencyName").textContent = config.agency || "—";
+    document.getElementById("totalAmount").textContent = `US$${config.amount || "49.00"}`;
+
+    if (config.alreadyPaid) {
+      show("Este pago ya fue confirmado.", "success");
+      return;
+    }
+    if (!response.ok || !config.enabled || !config.clientId) {
+      show(errorText(config.error || "live_not_configured"), "info");
+      return;
+    }
+
+    const sdk = document.createElement("script");
+    sdk.src = `https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(config.clientId)}&currency=USD&components=buttons&intent=capture&disable-funding=credit,paylater`;
+    sdk.onload = () => {
+      paypal.Buttons({
+        style:{layout:"vertical",color:"gold",shape:"rect",label:"paypal",height:48},
+        async createOrder() {
+          show("Creando la orden segura…", "info");
+          const r = await fetch(`${BASE}/paypal-live-create-order`, {
+            method:"POST", headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({applicationId, token})
+          });
+          const data = await r.json().catch(() => ({error:"invalid_response"}));
+          if (!r.ok || !data.id) throw new Error(data.error || "paypal_create_failed");
+          return data.id;
+        },
+        async onApprove(data) {
+          show("PayPal aprobó la orden. Confirmando el pago…", "info", `Orden: ${data.orderID}`);
+          const r = await fetch(`${BASE}/paypal-live-capture-order`, {
+            method:"POST", headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({applicationId, token, orderId:data.orderID})
+          });
+          const details = await r.json().catch(() => ({error:"invalid_response"}));
+          if (!r.ok || !details.ok) throw new Error(details.error || "paypal_capture_failed");
+          container.innerHTML = "";
+          show("Pago confirmado. Tu piloto MindShock está activado.", "success",
+            `Orden: ${details.orderId} · Captura: ${details.captureId} · US$${details.amount}`);
+        },
+        onCancel(data) { show("El pago fue cancelado. No se realizó ningún cargo.", "info", data.orderID ? `Orden: ${data.orderID}` : ""); },
+        onError(err) { console.error(err); show(errorText(err?.message || "unknown_error"), "error", `Código: ${err?.message || "unknown_error"}`); }
+      }).render("#paypal-button-container");
+    };
+    sdk.onerror = () => show("No se pudo cargar PayPal.", "error");
+    document.head.appendChild(sdk);
+  }
+  start();
+})();
+</script>
+</body>
+</html>

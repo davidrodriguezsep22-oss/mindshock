@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prueba interna | MindShock Sandbox</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0b1020">
+  <style>
+    :root {
+      --ink:#0b1020;
+      --muted:#5c6472;
+      --paper:#f7f5ef;
+      --white:#ffffff;
+      --blue:#1248f5;
+      --green:#08704f;
+      --red:#b42318;
+      --line:#d9dde5;
+      --yellow:#fff3bf;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      min-height:100vh;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Arial,sans-serif;
+      display:grid;
+      place-items:center;
+      padding:28px;
+    }
+    .shell {
+      width:min(100%,760px);
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:0 24px 70px rgba(14,23,49,.13);
+      overflow:hidden;
+    }
+    header {
+      padding:25px 30px;
+      background:var(--ink);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand { font-size:25px;font-weight:800;letter-spacing:-1px; }
+    .badge {
+      background:var(--yellow);
+      color:#5d4900;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    main { padding:35px 30px 30px; }
+    h1 {
+      font-family:Georgia,serif;
+      font-size:clamp(36px,7vw,56px);
+      font-weight:400;
+      letter-spacing:-2px;
+      line-height:1;
+      margin:0 0 16px;
+    }
+    .lead { color:var(--muted);font-size:17px;line-height:1.65;margin:0 0 28px; }
+    .summary {
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      margin-bottom:25px;
+    }
+    .summary-row {
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:9px 0;
+      border-bottom:1px solid #eceef2;
+    }
+    .summary-row:last-child { border-bottom:0; }
+    .summary-row span { color:var(--muted); }
+    .summary-row strong { text-align:right; }
+    .total {
+      margin-top:5px;
+      font-size:21px;
+    }
+    .notice {
+      padding:16px;
+      border-radius:10px;
+      background:#eef3ff;
+      color:#243c77;
+      line-height:1.55;
+      margin:0 0 24px;
+      font-size:14px;
+    }
+    #paypal-button-container { min-height:45px; }
+    .message {
+      display:none;
+      margin-top:22px;
+      border-radius:11px;
+      padding:17px;
+      line-height:1.55;
+    }
+    .message.show { display:block; }
+    .message.info { background:#eef3ff;color:#243c77; }
+    .message.success { background:#e7f8ef;color:var(--green); }
+    .message.error { background:#feeceb;color:var(--red); }
+    .reference {
+      display:block;
+      margin-top:10px;
+      font-family:monospace;
+      font-size:12px;
+      overflow-wrap:anywhere;
+    }
+    footer {
+      border-top:1px solid var(--line);
+      padding:20px 30px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+    }
+    a { color:var(--blue); }
+    @media(max-width:560px) {
+      body { padding:0;background:#fff; }
+      .shell { border:0;border-radius:0;box-shadow:none;min-height:100vh; }
+      header,main,footer { padding-left:21px;padding-right:21px; }
+      .summary-row { align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">MindShock.</div>
+      <div class="badge">Sandbox · Dinero ficticio</div>
+    </header>
+
+    <main>
+      <h1>Completa el pago de prueba.</h1>
+      <p class="lead">
+        Esta página simula el pago del piloto de MindShock para Laura Méndez.
+        No mueve dinero real ni afecta tu cuenta real de PayPal.
+      </p>
+
+      <div class="summary">
+        <div class="summary-row"><span>Cliente</span><strong>Laura Méndez — prueba</strong></div>
+        <div class="summary-row"><span>Servicio</span><strong>Piloto MindShock, 2 semanas</strong></div>
+        <div class="summary-row"><span>Alcance</span><strong>1 marca · hasta 10 borradores</strong></div>
+        <div class="summary-row total"><span>Total Sandbox</span><strong>US$49.00</strong></div>
+      </div>
+
+      <p class="notice">
+        Inicia sesión únicamente con la cuenta <strong>Personal Sandbox</strong>.
+        No uses el correo ni la contraseña de tu PayPal real.
+      </p>
+
+      <div id="paypal-button-container"></div>
+      <div id="result-message" class="message" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer>
+      Prueba técnica privada. El resultado se registra en Supabase y cambia la solicitud
+      ficticia a <strong>paid</strong> solo cuando PayPal Sandbox devuelve una captura completada.
+    </footer>
+  </div>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AUgFluTEJ1wgHHkpGeoM6NDiB7HuFJtgsqp88ydwio1pU0BsRc8kdaUY2Qf26FNKkMlNLR-wpUk_FWcv&currency=USD&components=buttons&intent=capture"></script>
+  <script>
+    const FUNCTIONS_BASE = "https://zssjhpogljzxvfukesgf.supabase.co/functions/v1";
+    const params = new URLSearchParams(window.location.search);
+    const applicationId = params.get("application") || "";
+    const token = params.get("token") || "";
+    const message = document.getElementById("result-message");
+    const container = document.getElementById("paypal-button-container");
+
+    function showMessage(text, type = "info", reference = "") {
+      message.className = `message show ${type}`;
+      message.innerHTML = `<strong>${text}</strong>` +
+        (reference ? `<span class="reference">${reference}</span>` : "");
+    }
+
+    function friendlyError(code) {
+      const messages = {
+        invalid_payment_link: "El enlace de pago no es válido.",
+        payment_link_expired: "El enlace de pago venció. Solicita uno nuevo.",
+        application_not_payable: "Esta solicitud no está habilitada para pago.",
+        already_paid: "Este piloto ya aparece como pagado.",
+        server_configuration: "Falta completar la configuración privada de PayPal Sandbox.",
+        paypal_create_failed: "PayPal no pudo crear la orden de prueba.",
+        paypal_capture_failed: "PayPal no pudo capturar el pago de prueba.",
+        payment_validation_failed: "La confirmación de PayPal no coincidió con el importe esperado.",
+        payment_not_completed: "PayPal todavía no confirmó el pago como completado.",
+      };
+      return messages[code] || "No se pudo completar la prueba. Revisa la configuración e inténtalo nuevamente.";
+    }
+
+    if (!applicationId || token.length < 30) {
+      container.innerHTML = "";
+      showMessage("El enlace está incompleto o no es válido.", "error");
+    } else if (!window.paypal) {
+      showMessage("No se pudo cargar PayPal. Actualiza la página.", "error");
+    } else {
+      paypal.Buttons({
+        style: {
+          layout: "vertical",
+          color: "gold",
+          shape: "rect",
+          label: "paypal",
+          height: 48
+        },
+
+        async createOrder() {
+          showMessage("Creando la orden Sandbox…", "info");
+          const response = await fetch(`${FUNCTIONS_BASE}/paypal-sandbox-create-order`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ applicationId, token })
+          });
+
+          const data = await response.json().catch(() => ({ error: "invalid_response" }));
+          if (!response.ok || !data.id) {
+            throw new Error(data.error || "create_order_failed");
+          }
+
+          showMessage("Orden creada. Continúa en la ventana de PayPal Sandbox.", "info", `Orden: ${data.id}`);
+          return data.id;
+        },
+
+        async onApprove(data) {
+          showMessage("PayPal aprobó la orden. Confirmando la captura…", "info", `Orden: ${data.orderID}`);
+
+          const response = await fetch(`${FUNCTIONS_BASE}/paypal-sandbox-capture-order`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              applicationId,
+              token,
+              orderId: data.orderID
+            })
+          });
+
+          const details = await response.json().catch(() => ({ error: "invalid_response" }));
+          if (!response.ok || !details.ok) {
+            throw new Error(details.error || "capture_order_failed");
+          }
+
+          container.innerHTML = "";
+          showMessage(
+            "Pago Sandbox completado. Laura ya figura como clienta ficticia pagada.",
+            "success",
+            `Orden: ${details.orderId} · Captura: ${details.captureId} · US$${details.amount}`
+          );
+        },
+
+        onCancel(data) {
+          showMessage("Laura canceló el pago de prueba. No se realizó ninguna captura.", "info", data.orderID ? `Orden: ${data.orderID}` : "");
+        },
+
+        onError(error) {
+          console.error(error);
+          const code = error?.message || "unknown_error";
+          showMessage(friendlyError(code), "error", `Código: ${code}`);
+        }
+      }).render("#paypal-button-container");
+    }
+  </script>
+</body>
+</html>

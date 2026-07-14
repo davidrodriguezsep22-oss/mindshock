@@ -1,0 +1,33 @@
+PAYPAL LIVE — ACTIVACIÓN FINAL
+
+Estado actual:
+- La base de datos está preparada.
+- paypal-live-config está desplegada.
+- paypal-live-create-order está desplegada.
+- pilot-payment-link está desplegada.
+- El sitio público y las páginas separadas están incluidos en este paquete.
+- Sandbox continúa funcionando por separado.
+
+Antes de aceptar dinero real:
+1. Tener una cuenta PayPal Business real y verificada.
+2. Crear o abrir una aplicación en PayPal Developer con la pestaña LIVE seleccionada.
+3. Guardar en Supabase Edge Functions > Secrets:
+   PAYPAL_LIVE_CLIENT_ID
+   PAYPAL_LIVE_SECRET
+4. Desplegar desde la carpeta supabase/functions:
+   paypal-live-capture-order
+   paypal-live-webhook
+5. En PayPal Live, registrar el webhook con esta URL:
+   https://zssjhpogljzxvfukesgf.supabase.co/functions/v1/paypal-live-webhook
+6. Escuchar como mínimo estos eventos:
+   PAYMENT.CAPTURE.COMPLETED
+   PAYMENT.CAPTURE.DENIED
+   PAYMENT.CAPTURE.REFUNDED
+7. Guardar en Supabase el identificador del webhook como:
+   PAYPAL_LIVE_WEBHOOK_ID
+8. Hacer un pago real mínimo controlado antes de enviar enlaces a clientes.
+
+IMPORTANTE:
+- No guardar secretos dentro de GitHub.
+- No usar credenciales Sandbox en Live.
+- No enviar un enlace Live hasta que captura y webhook estén desplegados.

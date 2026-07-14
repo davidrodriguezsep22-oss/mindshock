@@ -1,0 +1,16 @@
+MINDShock — actualización preparada
+
+1. Descomprime el ZIP.
+2. Abre el repositorio davidrodriguezsep22-oss/mindshock en GitHub.
+3. Pulsa Add file > Upload files.
+4. Arrastra TODO el contenido de la carpeta descomprimida, conservando las carpetas.
+5. Confirma Commit directly to main y pulsa Commit changes.
+
+Resultado:
+- index.html reemplaza la página pública y elimina el código Sandbox.
+- pago.html queda reservado para clientes reales aprobados.
+- pruebas/paypal-sandbox.html conserva las pruebas separadas.
+- robots.txt impide que las páginas privadas se indexen.
+- supabase/functions guarda una copia del código de las funciones.
+
+No subas Client Secret, contraseñas ni claves privadas a GitHub.
