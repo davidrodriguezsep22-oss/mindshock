@@ -1,73 +1,17 @@
-MINDSHOCK — VERSIÓN DEFINITIVA
-==============================
+MINDShock - Página web mejorada
 
-Esta carpeta está lista para subir a GitHub Pages.
+Contenido:
+- index.html: página completa mejorada, con estilos, formulario y conexión a Supabase integrados.
 
-ARCHIVOS PRINCIPALES
-- index.html
-- privacidad.html
-- terminos.html
-- assets/styles.css
-- assets/script.js
-- assets/david-rodriguez.webp
-- assets/kit-mindshock.webp
-- assets/favicon.svg
+Cómo subirla a GitHub:
+1. Descomprime este archivo ZIP.
+2. Abre el repositorio mindshock.
+3. Pulsa Add file > Upload files.
+4. Arrastra el archivo index.html.
+5. GitHub debe reemplazar el index.html existente.
+6. Confirma Commit directly to the main branch.
+7. Pulsa Commit changes.
 
-MEJORAS INCLUIDAS
-- Foto de Germán David Rodríguez incluida.
-- Imagen del Kit Profesional.
-- Botón de pago Bold con valor de $29.900 COP.
-- Botones directos de WhatsApp.
-- Diseño adaptable a celular, tableta y computador.
-- Sección del fundador.
-- Preguntas frecuentes.
-- Formulario que prepara el mensaje de WhatsApp.
-- Política de privacidad y términos.
-- SEO básico y datos estructurados.
-- Mejoras de accesibilidad, velocidad y jerarquía visual.
-- Botón flotante de WhatsApp.
-- Mensajes de confianza antes del pago.
-
-ENLACE DE PAGO BOLD
-https://checkout.bold.co/payment/LNK_IJMERGI2UL
-
-PASOS PARA PUBLICAR
-1. Descomprime el ZIP.
-2. Sube el contenido completo a la raíz del repositorio mindshock.
-3. Reemplaza los archivos anteriores.
-4. Confirma los cambios.
-5. Espera unos minutos y abre https://mindshock.app
-
-
-CORRECCIÓN DE FOTO DEL FUNDADOR
-- La foto ahora usa un círculo real con proporción 1:1.
-- Se eliminó la apariencia ovalada y alargada.
-- El rostro queda centrado.
-- Tamaño máximo en portátil: 420 px.
-- Tamaño máximo en celular: 260 px.
-- Se añadieron versiones en los enlaces de CSS, JavaScript e imagen para evitar que el navegador muestre archivos antiguos guardados en caché.
-
-
-ACTUALIZACIÓN
-- Se agregó una franja visible con “1 compra confirmada” y “Primer cliente atendido con éxito”.
-
-
-GOOGLE ANALYTICS
-- Se instaló Google Analytics 4 con el ID G-BW5HF0N1H9 en todas las páginas HTML.
-
-
-ACTUALIZACIÓN GLOBAL
-- Servicio presentado para hispanohablantes en cualquier país del mundo.
-- Campo de país buscable con países de América, Europa, Asia, África y Oceanía.
-- Opción para escribir territorios o regiones no listadas.
-- Mensajes de pago diferenciados para Colombia y otros países.
-- Eventos de Google Analytics para clics en Bold, WhatsApp, correo y envío del formulario.
-- Política de privacidad actualizada con analítica web y cobertura internacional.
-- SEO y datos estructurados actualizados con cobertura mundial e idioma español.
-
-
-PAGO INTERNACIONAL
-- Se agregó PayPal para clientes fuera de Colombia.
-- Precio internacional: USD 9.
-- Enlace: https://www.paypal.com/ncp/payment/GA37QA86DNT8S
-- Google Analytics registra clics con el evento paypal_click.
+Importante:
+El index.html actual del repositorio solo redirige a chatgpt.site.
+Para que mindshock.app muestre directamente la página mejorada, sí es necesario reemplazar ese index.html.
