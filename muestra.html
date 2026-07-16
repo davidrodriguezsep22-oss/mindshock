@@ -8,10 +8,13 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#faf8f3">
   <link rel="canonical" href="https://mindshock.app/muestra.html">
+  <link rel="alternate" hreflang="es" href="https://mindshock.app/muestra.html">
+  <link rel="alternate" hreflang="en" href="https://mindshock.app/sample.html">
+  <link rel="alternate" hreflang="x-default" href="https://mindshock.app/muestra.html">
   <style>
     :root{--ink:#090d1a;--muted:#505765;--paper:#faf8f3;--blue:#1248f5;--blue2:#0b38cc;--coral:#ff6655;--green:#147a5c;--line:#d9dce2;--white:#fff;--soft:#f1efe9;--night:#0e1422}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}
-    .wrap{max-width:1180px;margin:auto;padding-left:42px;padding-right:42px}.header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:30px}.brand{font-size:28px;font-weight:800;letter-spacing:-1.4px}.brand b,h1 b{color:var(--coral)}nav{margin-left:auto;display:flex;gap:25px;font-size:14px;font-weight:700}.head-cta{color:var(--blue);font-weight:800}
+    .wrap{max-width:1180px;margin:auto;padding-left:42px;padding-right:42px}.header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:30px}.brand{font-size:28px;font-weight:800;letter-spacing:-1.4px}.brand b,h1 b{color:var(--coral)}nav{margin-left:auto;display:flex;gap:25px;font-size:14px;font-weight:700}.lang-switch{display:flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:4px;font-size:11px;font-weight:900}.lang-switch a,.lang-switch span{padding:5px 7px;border-radius:999px}.lang-switch .active{background:var(--ink);color:#fff}.head-cta{color:var(--blue);font-weight:800;white-space:nowrap}
     .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;padding-top:88px;padding-bottom:88px}.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.14em;color:var(--blue);font-size:12px;font-weight:800}.eyebrow:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--coral);margin-right:10px}h1{font-family:Georgia,serif;font-size:clamp(54px,6vw,82px);font-weight:400;letter-spacing:-4px;line-height:.97;margin:22px 0 26px}.lede{color:var(--muted);font-size:19px;line-height:1.65;max-width:700px}.actions{display:flex;align-items:center;gap:17px;margin-top:34px}.btn{border-radius:8px;background:var(--blue);color:#fff;font-weight:800;padding:17px 22px;display:inline-flex;justify-content:space-between;gap:35px;box-shadow:0 10px 25px #1248f52b}.btn:hover{background:var(--blue2)}.ghost{color:var(--blue);font-weight:800}
     .case-card{background:#fff;border:1px solid #ccd1da;border-radius:18px;padding:28px;box-shadow:0 25px 65px #12192d1b}.case-top{display:flex;gap:15px;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line)}.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:900}.case-top small{display:block;color:var(--muted);margin-top:4px}.fiction{margin-left:auto;background:#fff0ed;color:#a93427;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:800}.facts{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:22px}.fact{background:var(--soft);border-radius:10px;padding:15px}.fact strong,.fact span{display:block}.fact span{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
     .notice{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:#fff}.notice .wrap{display:flex;gap:12px;align-items:flex-start}.notice strong{white-space:nowrap}.notice span{color:var(--muted);line-height:1.5}
@@ -23,15 +26,16 @@
     .process{background:var(--soft)}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}.process-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:23px}.process-card b{color:var(--blue);font-size:12px}.process-card h3{margin:13px 0 9px}.process-card p{color:var(--muted);line-height:1.55;font-size:14px;margin:0}
     .cta{padding-top:85px;padding-bottom:85px}.cta-box{background:var(--blue);color:#fff;border-radius:20px;padding:55px;display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}.cta-box h2{font-family:Georgia,serif;font-weight:400;font-size:45px;letter-spacing:-2px;margin:0 0 13px}.cta-box p{color:#dbe4ff;line-height:1.6;margin:0;max-width:690px}.cta-box .btn{background:#fff;color:var(--blue);box-shadow:none}.cta-box .btn:hover{background:#edf2ff}
     footer{border-top:1px solid var(--line);padding-top:42px;padding-bottom:42px;display:flex;gap:25px;align-items:center}footer p{color:var(--muted);margin-left:20px}footer div{margin-left:auto;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}footer a{color:var(--blue);font-weight:700}
-    @media(max-width:900px){.wrap{padding-left:24px;padding-right:24px}nav{display:none}.hero,.intro,.calendar{grid-template-columns:1fr}.profile-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.post{grid-template-columns:1fr}.post-meta{border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:18px}.cta-box{grid-template-columns:1fr}.compare-box{grid-template-columns:1fr}.compare-side:last-child{border-left:0;border-top:1px solid #303746}}
+    @media(max-width:900px){.wrap{padding-left:24px;padding-right:24px}.header{gap:12px}nav{display:none}.lang-switch{margin-left:auto}.head-cta{font-size:13px}.hero,.intro,.calendar{grid-template-columns:1fr}.profile-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.post{grid-template-columns:1fr}.post-meta{border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:18px}.cta-box{grid-template-columns:1fr}.compare-box{grid-template-columns:1fr}.compare-side:last-child{border-left:0;border-top:1px solid #303746}}
     @media(max-width:580px){h1{font-size:50px;letter-spacing:-3px}.lede{font-size:17px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.profile-grid,.process-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.cal-row{grid-template-columns:80px 1fr}.cal-row>*:last-child{grid-column:2}.notice .wrap{display:block}.notice strong{display:block;margin-bottom:8px}.cta-box{padding:32px}.cta-box h2{font-size:37px}footer{align-items:flex-start;flex-direction:column}footer p{margin-left:0}footer div{margin-left:0}}
   </style>
 </head>
 <body>
 <header class="header wrap">
-  <a class="brand" href="/">MindShock<b>.</b></a>
+  <a class="brand" href="/muestra.html">MindShock<b>.</b></a>
   <nav><a href="#perfil">Perfil de voz</a><a href="#borradores">Borradores</a><a href="#calendario">Calendario</a><a href="#proceso">Proceso</a></nav>
-  <a class="head-cta" href="/#solicitud">Solicitar piloto</a>
+  <div class="lang-switch" aria-label="Idioma"><span class="active">ES</span><a href="/sample.html" lang="en" hreflang="en">EN</a></div>
+  <a class="head-cta" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar piloto</a>
 </header>
 
 <main>
@@ -40,7 +44,7 @@
       <p class="eyebrow">Muestra comercial · Caso ficticio</p>
       <h1>Una voz reconocible antes de producir diez textos<b>.</b></h1>
       <p class="lede">Esta demostración resume cómo MindShock convierte referencias autorizadas, límites editoriales y feedback en un perfil de voz, borradores revisables y un calendario de dos semanas.</p>
-      <div class="actions"><a class="btn" href="#perfil">Explorar la muestra <span>↓</span></a><a class="ghost" href="/#solicitud">Solicitar el piloto →</a></div>
+      <div class="actions"><a class="btn" href="#perfil">Explorar la muestra <span>↓</span></a><a class="ghost" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar el piloto →</a></div>
     </div>
     <aside class="case-card">
       <div class="case-top"><span class="avatar">LT</span><div><strong>Lucía Torres</strong><small>Fundadora de Nexo Operativo</small></div><span class="fiction">Ficticio</span></div>
@@ -161,10 +165,10 @@ La IA puede clasificar, resumir y proponer. Pero si el equipo no comparte una de
   </section>
 
   <section class="cta wrap">
-    <div class="cta-box"><div><h2>Prueba el proceso con una sola marca.</h2><p>El piloto dura dos semanas, incluye hasta diez borradores y cuesta US$49 después de aprobar la solicitud. No necesitas cambiar las herramientas actuales de tu agencia.</p></div><a class="btn" href="/#solicitud">Solicitar acceso <span>↗</span></a></div>
+    <div class="cta-box"><div><h2>Prueba el proceso con una sola marca.</h2><p>El piloto dura dos semanas, incluye hasta diez borradores y cuesta US$49 después de aprobar la solicitud. No necesitas cambiar las herramientas actuales de tu agencia.</p></div><a class="btn" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar acceso <span>↗</span></a></div>
   </section>
 </main>
 
-<footer class="wrap"><a class="brand" href="/">MindShock<b>.</b></a><p>Piloto responsable para convertir contexto en contenido útil.</p><div><a href="mailto:contacto@mindshock.app">contacto@mindshock.app</a><a href="/">Inicio</a><span>© 2026 MindShock</span></div></footer>
+<footer class="wrap"><a class="brand" href="/muestra.html">MindShock<b>.</b></a><p>Piloto responsable para convertir contexto en contenido útil.</p><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="/caso-nexo-operativo.html">Caso completo</a><a href="/sample.html" lang="en">English</a><span>© 2026 MindShock</span></div></footer>
 </body>
 </html>

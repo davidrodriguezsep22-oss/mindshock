@@ -1,0 +1,18 @@
+MINDShock — bilingual website update
+
+Upload these four files to the root of the GitHub repository and replace the two Spanish files when GitHub asks:
+
+1. muestra.html                     (updated Spanish sample with ES | EN selector)
+2. sample.html                      (new English sample)
+3. caso-nexo-operativo.html         (updated Spanish full case with ES | EN selector)
+4. case-nexo-operativo.html         (new English full case)
+
+Commit directly to the main branch.
+
+Expected URLs:
+https://mindshock.app/muestra.html
+https://mindshock.app/sample.html
+https://mindshock.app/caso-nexo-operativo.html
+https://mindshock.app/case-nexo-operativo.html
+
+The call-to-action buttons open an email to ventas@mindshock.app rather than sending visitors to the current root page.
