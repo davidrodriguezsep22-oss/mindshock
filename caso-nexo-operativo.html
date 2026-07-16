@@ -4,10 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MindShock | Piloto de consistencia de voz para agencias</title>
-<meta name="description" content="Página completa de MindShock: oferta, proceso, caso demostrativo ficticio y solicitud del piloto privado para agencias.">
+<meta name="description" content="MindShock ayuda a agencias a documentar la voz de sus clientes y convertirla en borradores coherentes para LinkedIn mediante un piloto privado de dos semanas con revisión humana.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#faf8f3">
 <link rel="canonical" href="https://mindshock.app/caso-nexo-operativo.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MindShock | Piloto de consistencia de voz para agencias">
+<meta property="og:description" content="Perfil operativo de voz, hasta 10 borradores para LinkedIn y revisión humana en un piloto privado de dos semanas.">
+<meta property="og:url" content="https://mindshock.app/caso-nexo-operativo.html">
+<meta property="og:site_name" content="MindShock">
+<meta name="twitter:card" content="summary">
+
 <style>
 :root{--ink:#090d1a;--muted:#535b6a;--paper:#faf8f3;--blue:#1248f5;--blue2:#0b38cc;--coral:#ff6655;--line:#d9dce2;--white:#fff;--soft:#f1efe9;--night:#0e1422}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}
@@ -25,44 +32,46 @@ footer{border-top:1px solid var(--line);padding:38px 0;display:flex;gap:22px;ali
 @media(max-width:900px){nav{display:none}.hero,.intro,.offer{grid-template-columns:1fr}.grid3,.profile{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.cta{grid-template-columns:1fr}.case-link{align-items:flex-start;flex-direction:column}.metric-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:580px){.wrap{padding:0 22px}.header{gap:10px}.lang{margin-left:auto}.top-cta{font-size:12px}h1{font-size:48px;letter-spacing:-3px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.facts,.grid3,.profile,.steps,.metric-grid{grid-template-columns:1fr}.cta{padding:30px}.cta h2{font-size:36px}footer{align-items:flex-start;flex-direction:column}footer div{margin-left:0}}
 
-.lang-switch{position:sticky;top:0;z-index:30;background:#faf8f3;border-bottom:1px solid #d9dce2}
+.skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:16px;top:16px;z-index:100;background:#fff;padding:10px 14px;border:2px solid #090d1a;border-radius:8px}.lang-switch{position:sticky;top:0;z-index:40;background:#faf8f3;border-bottom:1px solid #d9dce2}
 .lang-switch .wrap{display:flex;justify-content:flex-end;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px}
 .lang-btn{border:1px solid #d9dce2;background:#fff;padding:8px 12px;border-radius:999px;font-weight:900;cursor:pointer}
 .lang-btn.active{background:#090d1a;color:#fff}
 [data-lang]{display:none}[data-lang].active{display:block}
-.anchor-note{font-size:13px;color:#535b6a;margin-top:12px}
 </style>
 <script>
-function setLang(lang){
+function setLang(lang, updateHash=true){
   document.querySelectorAll('[data-lang]').forEach(el=>el.classList.remove('active'));
-  document.querySelector('[data-lang="'+lang+'"]').classList.add('active');
+  const panel=document.querySelector('[data-lang="'+lang+'"]');
+  if(panel) panel.classList.add('active');
   document.querySelectorAll('.lang-btn').forEach(el=>el.classList.remove('active'));
-  document.querySelector('.lang-btn[data-target="'+lang+'"]').classList.add('active');
-  document.documentElement.lang = lang;
-  history.replaceState(null,'',lang==='en' ? '#english' : '#inicio');
+  const btn=document.querySelector('.lang-btn[data-target="'+lang+'"]');
+  if(btn) btn.classList.add('active');
+  document.documentElement.lang=lang;
+  if(updateHash) history.replaceState(null,'',lang==='en' ? '#english' : '#inicio');
 }
 window.addEventListener('DOMContentLoaded',()=>{
-  const lang = location.hash === '#english' ? 'en' : 'es';
-  setLang(lang);
+  setLang(location.hash==='#english' ? 'en' : 'es', false);
+});
+window.addEventListener('hashchange',()=>{
+  if(location.hash==='#english') setLang('en',false);
+  if(location.hash==='#inicio') setLang('es',false);
 });
 </script>
 </head>
-<body id="inicio">
-<div class="lang-switch">
+<body id="inicio"><a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+<div class="lang-switch" aria-label="Selector de idioma">
   <div class="wrap">
-    <button class="lang-btn active" data-target="es" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" data-target="en" onclick="setLang('en')">EN</button>
+    <button type="button" class="lang-btn active" data-target="es" aria-label="Mostrar versión en español" onclick="setLang('es')">ES</button>
+    <button type="button" class="lang-btn" data-target="en" aria-label="Show English version" onclick="setLang('en')">EN</button>
   </div>
 </div>
-<div data-lang="es" class="active">
-
-<header class="header wrap">
+<main id="contenido-principal">
+  <div data-lang="es" class="active"><header class="header wrap">
 <a class="brand" href="#inicio">MindShock<b>.</b></a>
 <nav><a href="#problema">Problema</a><a href="#piloto">Piloto</a><a href="#proceso">Proceso</a><a href="#caso">Caso</a></nav>
 <div class="lang"><span class="active">ES</span><a href="#english" lang="en">EN</a></div>
 <a class="top-cta" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar piloto</a>
 </header>
-<main>
 <section class="hero wrap">
 <div><p class="eyebrow">Piloto privado para agencias</p><h1>Una voz distinta para cada cliente, sin añadir otra herramienta<b>.</b></h1>
 <p class="lede">MindShock ayuda a documentar la voz de un líder o marca y convertirla en borradores coherentes para LinkedIn. El trabajo se realiza por correo, alrededor de las herramientas actuales de tu equipo y con revisión humana antes de cada entrega.</p>
@@ -86,7 +95,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <section><div class="wrap"><div class="notice"><strong>Privacidad:</strong> el piloto puede realizarse con una marca anonimizada. No deben compartirse contraseñas, datos personales sensibles ni materiales sujetos a restricciones que impidan su uso.</div></div></section>
 <section><div class="wrap"><div class="cta"><div><h2>Comprueba si el piloto encaja con tu equipo.</h2><p>Escribe a ventas@mindshock.app. Primero revisamos el problema, el material disponible y el alcance; después confirmamos fechas y pago.</p></div><a class="btn" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar evaluación <span>↗</span></a></div></div></section>
-<section id="caso-es">
+<section id="caso-es" aria-label="Caso demostrativo">
 <section class="case-hero wrap"><div class="hero" style="padding:0"><div><p class="eyebrow">Caso demostrativo ficticio</p><h1>Una voz, diez borradores y un proceso trazable<b>.</b></h1><p class="lede">Esta simulación interna muestra cómo MindShock puede convertir referencias autorizadas, restricciones y feedback en un perfil operativo de voz y borradores revisables para LinkedIn.</p></div><aside><div class="badge"><strong>No es un testimonio.</strong><br>Nexo Operativo y Lucía Torres son identidades ficticias. Esta página demuestra el proceso, no resultados comerciales ni satisfacción de un cliente real.</div><div class="facts" style="margin-top:16px"><div class="fact"><b>Duración</b><span>2 semanas</span></div><div class="fact"><b>Marca</b><span>1 voz ficticia</span></div><div class="fact"><b>Canal</b><span>LinkedIn ejecutivo</span></div><div class="fact"><b>Revisión</b><span>1 ronda consolidada</span></div></div></aside></div></section>
 <section><div class="wrap"><p class="kicker">01 — Perfil operativo de voz</p><h2 class="section-title">Reglas observables antes de escribir.</h2><div class="profile">
 <article class="card"><b>Posición</b><h3>Práctica y escéptica</h3><p>Habla desde operaciones, decisiones y fricciones concretas. No presenta la IA como solución universal.</p></article>
@@ -103,19 +112,22 @@ window.addEventListener('DOMContentLoaded',()=>{
 <article class="post"><div class="post-head"><span>03</span><div><b>Tres preguntas antes de automatizar</b><small>Utilidad</small></div></div><p>1. ¿Qué evento inicia el trabajo?<br>2. ¿Quién debe tomar una decisión?<br>3. ¿Qué evidencia confirma que terminó?<br><br>Si una respuesta cambia cada semana, no empieces por la herramienta. Empieza por acordar el proceso.<br><br>La IA puede clasificar, resumir y proponer. Pero si el equipo no comparte una definición de “terminado”, producirá más rápido hacia destinos distintos.</p></article>
 </div></div></section>
 <section><div class="wrap"><div class="cta"><div><h2>Prueba el proceso con una marca real.</h2><p>El piloto dura dos semanas, trabaja una voz anonimizada e incluye perfil operativo, hasta diez borradores y una ronda consolidada por US$49 después de aprobar la solicitud.</p></div><a class="btn" href="mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock">Solicitar evaluación <span>→</span></a></div></div></section>
-</section></main>
-<footer class="wrap"><a class="brand" href="#inicio">MindShock<b>.</b></a><span>Piloto de consistencia de voz para contenido ejecutivo.</span><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="#caso-es">Caso completo</a><a href="#english" lang="en">English</a><span>© 2026 MindShock</span></div></footer>
-
-</div>
-<div data-lang="en" id="english">
-
-<header class="header wrap">
+</section>
+<section id="faq"><div class="wrap">
+<p class="kicker">Preguntas frecuentes</p>
+<h2 class="section-title">Antes de solicitar el piloto.</h2>
+<div class="grid3">
+<article class="card"><b>01</b><h3>¿Necesitas acceso a nuestras cuentas?</h3><p>No. MindShock trabaja con ejemplos, criterios y materiales autorizados. La publicación permanece bajo control del cliente.</p></article>
+<article class="card"><b>02</b><h3>¿El piloto reemplaza nuestras herramientas?</h3><p>No. El proceso se adapta a Notion, Google Docs, correo u otras herramientas que el equipo ya utilice.</p></article>
+<article class="card"><b>03</b><h3>¿Qué ocurre después de escribir?</h3><p>Primero revisamos si el caso encaja. Si se aprueba, confirmamos alcance, fechas y pago antes de iniciar.</p></article>
+</div></div></section>
+<footer class="wrap"><a class="brand" href="#inicio">MindShock<b>.</b></a><span>Piloto de consistencia de voz para contenido ejecutivo.</span><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="#caso-es">Caso completo</a><a href="#english" lang="en">English</a><span>© 2026 MindShock</span></div></footer></div>
+  <div data-lang="en" id="english"><header class="header wrap">
 <a class="brand" href="#english">MindShock<b>.</b></a>
 <nav><a href="#problem">Problem</a><a href="#pilot">Pilot</a><a href="#process">Process</a><a href="#case">Case</a></nav>
 <div class="lang"><a href="#inicio" lang="es">ES</a><span class="active">EN</span></div>
 <a class="top-cta" href="mailto:ventas@mindshock.app?subject=MindShock%20pilot%20request">Request pilot</a>
 </header>
-<main>
 <section class="hero wrap">
 <div><p class="eyebrow">Private pilot for agencies</p><h1>A distinct voice for every client, without adding another tool<b>.</b></h1>
 <p class="lede">MindShock helps document a leader's or brand's voice and turn it into coherent LinkedIn drafts. The work is handled by email, around your team's current tools, with human review before every delivery.</p>
@@ -139,7 +151,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <section><div class="wrap"><div class="notice"><strong>Privacy:</strong> the pilot can use an anonymized brand. Passwords, sensitive personal data, or restricted materials should not be shared.</div></div></section>
 <section><div class="wrap"><div class="cta"><div><h2>Check whether the pilot fits your team.</h2><p>Email ventas@mindshock.app. We first review the problem, available material, and scope; then we confirm dates and payment.</p></div><a class="btn" href="mailto:ventas@mindshock.app?subject=MindShock%20pilot%20request">Request evaluation <span>↗</span></a></div></div></section>
-<section id="case-en">
+<section id="case-en" aria-label="Caso demostrativo">
 <section class="case-hero wrap"><div class="hero" style="padding:0"><div><p class="eyebrow">Fictional demonstration case</p><h1>One voice, ten drafts, and a traceable process<b>.</b></h1><p class="lede">This internal simulation shows how MindShock can turn approved references, restrictions, and feedback into an operational voice profile and review-ready LinkedIn drafts.</p></div><aside><div class="badge"><strong>This is not a testimonial.</strong><br>Nexo Operativo and Lucía Torres are fictional identities. This page demonstrates the process, not commercial results or satisfaction from a real client.</div><div class="facts" style="margin-top:16px"><div class="fact"><b>Duration</b><span>2 weeks</span></div><div class="fact"><b>Brand</b><span>1 fictional voice</span></div><div class="fact"><b>Channel</b><span>Executive LinkedIn</span></div><div class="fact"><b>Review</b><span>1 consolidated round</span></div></div></aside></div></section>
 <section><div class="wrap"><p class="kicker">01 — Operational voice profile</p><h2 class="section-title">Observable rules before writing.</h2><div class="profile">
 <article class="card"><b>Point of view</b><h3>Practical and skeptical</h3><p>Speaks from operations, decisions, and specific friction. Does not present AI as a universal solution.</p></article>
@@ -156,9 +168,16 @@ window.addEventListener('DOMContentLoaded',()=>{
 <article class="post"><div class="post-head"><span>03</span><div><b>Three questions before automating</b><small>Utility</small></div></div><p>1. What event starts the work?<br>2. Who has to make a decision?<br>3. What evidence confirms it is complete?<br><br>If one answer changes every week, do not begin with the tool. Begin by agreeing on the process.<br><br>AI can classify, summarize, and propose. But if the team does not share a definition of “done,” it will produce faster toward different destinations.</p></article>
 </div></div></section>
 <section><div class="wrap"><div class="cta"><div><h2>Test the process with a real brand.</h2><p>The pilot lasts two weeks, covers one anonymized voice, and includes an operational profile, up to ten drafts, and one consolidated round for US$49 after approval.</p></div><a class="btn" href="mailto:ventas@mindshock.app?subject=MindShock%20pilot%20request">Request evaluation <span>→</span></a></div></div></section>
-</section></main>
-<footer class="wrap"><a class="brand" href="#english">MindShock<b>.</b></a><span>Voice consistency pilot for executive content.</span><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="#case-en">Full case</a><a href="#inicio" lang="es">Español</a><span>© 2026 MindShock</span></div></footer>
-
-</div>
+</section>
+<section id="faq-en"><div class="wrap">
+<p class="kicker">Frequently asked questions</p>
+<h2 class="section-title">Before requesting the pilot.</h2>
+<div class="grid3">
+<article class="card"><b>01</b><h3>Do you need access to our accounts?</h3><p>No. MindShock works with approved examples, criteria, and materials. Publishing remains under the client's control.</p></article>
+<article class="card"><b>02</b><h3>Does the pilot replace our tools?</h3><p>No. The process adapts to Notion, Google Docs, email, or other tools the team already uses.</p></article>
+<article class="card"><b>03</b><h3>What happens after we contact you?</h3><p>We first review whether the case fits. If approved, we confirm scope, dates, and payment before starting.</p></article>
+</div></div></section>
+<footer class="wrap"><a class="brand" href="#english">MindShock<b>.</b></a><span>Voice consistency pilot for executive content.</span><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="#case-en">Full case</a><a href="#inicio" lang="es">Español</a><span>© 2026 MindShock</span></div></footer></div>
+</main>
 </body>
 </html>
