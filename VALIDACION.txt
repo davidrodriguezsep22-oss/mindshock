@@ -1,6 +1,7 @@
 main_elements: 1
 duplicate_ids: []
-canonical: https://mindshock.app/caso-nexo-operativo.html
-mailto_links: ['mailto:ventas@mindshock.app', 'mailto:ventas@mindshock.app?subject=MindShock%20pilot%20request', 'mailto:ventas@mindshock.app?subject=Solicitud%20piloto%20MindShock']
-external_page_links: []
-language_panels: 2
+sticky_language_selectors: 1
+internal_header_language_selectors: 0
+spanish_case_anchor_exists: True
+english_case_anchor_exists: True
+english_case_aria: Demonstration case
