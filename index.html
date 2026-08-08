@@ -187,8 +187,9 @@
       form.reset();
       if (result.preview_status === 'generated' && result.preview) {
         const preview = result.preview;
+        const fitLabels = {strong:'alto',possible:'posible',weak:'bajo'};
         setText('preview-headline', preview.sample_headline);
-        setText('preview-fit', (preview.fit_assessment ? 'Encaje: ' + preview.fit_assessment + '. ' : '') + (preview.fit_reason || ''));
+        setText('preview-fit', (preview.fit_assessment ? 'Encaje: ' + (fitLabels[preview.fit_assessment] || preview.fit_assessment) + '. ' : '') + (preview.fit_reason || ''));
         setText('preview-diagnosis', preview.diagnosis);
         setText('preview-excerpt', preview.sample_excerpt);
         setText('preview-next-step', preview.next_step);
