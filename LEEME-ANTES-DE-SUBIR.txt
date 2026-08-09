@@ -1,0 +1,25 @@
+MINDSHOCK — PAQUETE WEB NUEVO
+Fecha: 9 de agosto de 2026
+
+CONTENIDO
+- index.html       Página principal nueva orientada a conversión.
+- privacidad.html Política de privacidad actualizada al servicio B2B actual.
+- terminos.html   Términos del Sprint de caso comercial B2B.
+- CNAME           Mantiene el dominio mindshock.app en GitHub Pages.
+- robots.txt      Reglas para buscadores.
+- sitemap.xml     Mapa del sitio.
+
+CÓMO SUBIRLO A GITHUB
+1. Descomprime el ZIP.
+2. Entra al repositorio: davidrodriguezsep22-oss/mindshock
+3. Sube estos archivos a la RAÍZ del repositorio, no dentro de una carpeta nueva.
+4. Reemplaza los archivos existentes cuando GitHub lo solicite.
+5. Haz el commit directamente en main si quieres publicarlo de inmediato.
+6. NO borres CNAME: es el archivo que conserva mindshock.app.
+7. Después del commit, abre https://mindshock.app y recarga la página.
+
+IMPORTANTE
+- La página usa el endpoint Supabase existente de MindShock.
+- Los enlaces de pago actuales de Bold y PayPal ya están incluidos.
+- La página principal es autosuficiente: CSS y JavaScript están integrados en index.html.
+- Los archivos antiguos dentro de assets/ pueden permanecer; la nueva home no depende de ellos.

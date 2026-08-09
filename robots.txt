@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /pago.html
 Disallow: /pruebas/
+Sitemap: https://mindshock.app/sitemap.xml
