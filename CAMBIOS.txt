@@ -1,0 +1,16 @@
+MindShock — oferta pública simplificada
+
+Reemplazar en el repositorio:
+- index.html
+- terminos.html
+
+Oferta pública:
+- Mapa de Caso Comercial B2B
+- COP 70.000 / USD 22
+- 24 horas desde pago confirmado + material suficiente/autorizado + autorización expresa de inicio
+
+Pagos:
+- Bold: https://checkout.bold.co/payment/LNK_C69QRTFDY5
+- PayPal: https://zssjhpogljzxvfukesgf.supabase.co/functions/v1/mindshock-entry-paypal
+
+La ejecución posterior se cotiza por escrito y ya no tiene precio público fijo.
