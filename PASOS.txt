@@ -1,0 +1,16 @@
+MINDSHOCK — AJUSTE DE INDEXACIÓN
+
+Sube al repositorio davidrodriguezsep22-oss/mindshock:
+
+1. README.md — reemplaza el README antiguo.
+2. sitemap.xml — reemplaza el sitemap actual.
+3. robots.txt — es equivalente al actual; puedes reemplazarlo para dejar el paquete completo.
+
+No reemplaces index.html: la V5 actual ya tiene canonical y robots index,follow.
+
+Después:
+- Añade mindshock.app a Google Search Console.
+- Envía https://mindshock.app/sitemap.xml en Sitemaps.
+- Usa Inspección de URLs sobre https://mindshock.app/ y solicita indexación.
+
+Google puede tardar días en rastrear/indexar incluso después de la solicitud.

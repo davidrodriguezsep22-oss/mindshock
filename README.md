@@ -1,69 +1,45 @@
-# MindShock — versión final para publicación
+# MindShock
 
-Esta carpeta contiene la versión profesional para Colombia y Latinoamérica, lista para publicar en:
+**Diagnóstico de evidencia previo a producir un caso de cliente B2B.**
 
-https://mindshock.app
+Sitio oficial: https://mindshock.app/
 
-## Contenido
+MindShock ayuda a agencias B2B, consultoras, empresas SaaS, tecnología y servicios profesionales a determinar qué historia comercial puede sostenerse con la evidencia disponible antes de invertir en entrevistas, redacción o diseño de un case study completo.
 
-- `index.html`: página principal.
-- `privacidad.html`: política de privacidad.
-- `terminos.html`: términos del servicio.
-- `404.html`: página para enlaces inexistentes.
-- `CNAME`: conecta GitHub Pages con `mindshock.app`.
-- `robots.txt`: instrucciones para buscadores.
-- `sitemap.xml`: mapa del sitio para Google.
-- `assets/`: estilos, JavaScript, favicon, imagen social y foto del fundador.
+## Oferta actual
 
-## Contactos configurados
+### Mapa de Caso Comercial B2B
 
-- WhatsApp: +57 302 280 5656
-- Correo: ventas@mindshock.app
-- Dominio: mindshock.app
+Precio publicado: **COP 70.000 / USD 22**, pago único.
 
-## Cómo publicar en GitHub
+El Mapa incluye:
 
-1. Extrae el ZIP.
-2. Abre tu repositorio `mindshock`.
-3. Selecciona **Agregar archivo → Cargar archivos**.
-4. Arrastra todo el contenido extraído, no el ZIP.
-5. Confirma los cambios.
-6. Espera unos minutos y abre `https://mindshock.app`.
-7. Pulsa `Ctrl + F5` si el navegador muestra una versión anterior.
+- ángulo recomendado;
+- estructura sugerida de caso de 1–2 páginas;
+- mapa de evidencia y límites;
+- evidencia faltante;
+- recomendación de siguiente paso;
+- revisión humana final.
 
-## Verificación funcional
+El plazo de **24 horas** comienza únicamente cuando coinciden:
 
-Antes de promocionar el sitio, comprueba:
+1. pago confirmado;
+2. material suficiente y autorizado confirmado por MindShock;
+3. autorización expresa del cliente para iniciar.
 
-- Menú: Servicios, Cómo funciona, Precio y Preguntas.
-- Todos los botones de WhatsApp.
-- Botones de correo a `ventas@mindshock.app`.
-- Privacidad y Términos.
-- Visualización en celular y portátil.
-- HTTPS activo.
+El pago por sí solo no activa el plazo.
 
-## Nota
+## Sitio
 
-La página no promete empleo ni resultados específicos. La inteligencia artificial
-se presenta como apoyo y todas las entregas requieren revisión humana.
+- Inicio: https://mindshock.app/
+- Privacidad: https://mindshock.app/privacidad.html
+- Términos: https://mindshock.app/terminos.html
+- Sitemap: https://mindshock.app/sitemap.xml
 
+## Principios
 
-## Mejoras de esta versión
+MindShock no inventa clientes, métricas, resultados ni testimonios. El servicio no garantiza ventas, reuniones, cierres, ingresos ni ROI. La inteligencia artificial puede apoyar la organización inicial de información, pero la entrega contratada incluye revisión humana.
 
-- Posicionamiento para profesionales hispanohablantes de Latinoamérica.
-- Adaptación de documentos según país y cargo objetivo.
-- Formulario que prepara una solicitud y abre WhatsApp.
-- Información de pagos para Colombia y otros países.
-- Nueva sección regional y preguntas frecuentes internacionales.
+## Contacto
 
-
-## Optimización para hispanohablantes
-
-- Titular centrado en el beneficio.
-- Alcance para mercados hispanohablantes, incluida España y el mercado hispano de Estados Unidos.
-- Precio internacional orientativo desde USD 12.
-- Entregables definidos: PDF, versión editable, LinkedIn, carta y guía escrita de entrevista.
-- Formulario con país, servicio, estado de la hoja de vida y cargo objetivo.
-- Ajustes unificados a siete días calendario.
-- Política de conservación de archivos de hasta 30 días.
-- Presentación real del fundador.
+ventas@mindshock.app
