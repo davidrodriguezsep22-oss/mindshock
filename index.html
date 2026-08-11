@@ -32,9 +32,21 @@
     .editor{display:grid;grid-template-columns:auto 1fr .8fr;gap:26px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px}.editor-mark{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--night);color:#fff;font-family:Georgia,serif;font-size:28px}.editor h2{font-family:Georgia,serif;font-weight:400;font-size:36px;letter-spacing:-1.4px;margin:8px 0 10px}.editor p,.editor-note{color:var(--muted);line-height:1.55}.editor-note{border-left:3px solid var(--coral);padding-left:18px}.editor-note strong{display:block;color:var(--ink);margin-bottom:5px}.editor a{color:var(--blue);font-weight:900}
     .lead-section{background:var(--night);color:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:.82fr 1.18fr;gap:38px;align-items:start}.lead-copy h2{font-family:Georgia,serif;font-size:42px;font-weight:400;letter-spacing:-1.8px;line-height:1.08;margin:12px 0 16px}.lead-copy p{color:#cbd0db;line-height:1.6}.lead-copy a{color:#fff;text-decoration:underline}.lead-form{background:#fff;color:var(--ink);border-radius:14px;padding:24px;display:grid;gap:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:900}.field input,.field select,.field textarea{width:100%;border:1px solid #aeb6c4;border-radius:8px;padding:12px 13px;background:#fff;color:var(--ink)}.field textarea{min-height:110px;resize:vertical}.checks{display:grid;gap:9px}.check{display:flex;gap:8px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.4}.check input{margin-top:3px}.check a{color:var(--blue);text-decoration:underline}.lead-form .btn{width:100%}.lead-form .btn:disabled{opacity:.65;cursor:wait}.form-status{min-height:20px;margin:0;color:var(--muted);font-size:14px;line-height:1.45}.form-status.success{color:var(--green);font-weight:800}.form-status.error{color:#b42318;font-weight:800}.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
     .preview{border:1px solid #b9c7ff;border-radius:12px;background:#f4f7ff;padding:19px;display:grid;gap:11px}.preview[hidden]{display:none}.preview .tag{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);font-weight:900}.preview h3{font-family:Georgia,serif;font-size:27px;letter-spacing:-1px;margin:0}.preview p{margin:0;color:var(--muted);line-height:1.5}.preview ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.5}.preview .preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.preview-note{font-size:12px!important}.fit-pill{display:inline-flex;width:max-content;border-radius:99px;padding:6px 9px;font-size:11px;font-weight:900;background:#e8f7ef;color:var(--green)}
+
+    .ecosystem{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+    .ecosystem h2{font-family:Georgia,serif;font-size:36px;font-weight:400;letter-spacing:-1.4px;margin:9px 0 12px}
+    .ecosystem p{color:var(--muted);line-height:1.6}
+    .ecosystem-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .ecosystem-card{border:1px solid var(--line);border-radius:12px;padding:18px;background:var(--paper)}
+    .ecosystem-card.current{border-color:#b9c7ff;background:#f4f7ff}
+    .ecosystem-card strong,.ecosystem-card span{display:block}
+    .ecosystem-card span{color:var(--muted);font-size:13px;line-height:1.5;margin-top:6px}
+    .ecosystem-card a{display:inline-block;margin-top:12px;color:var(--blue);font-weight:900}
+    .ecosystem-disclosure{margin-top:14px;font-size:12px!important;border-left:3px solid var(--coral);padding-left:12px}
+
     footer{border-top:1px solid var(--line);padding-top:34px;padding-bottom:34px;display:flex;gap:20px;align-items:center;color:var(--muted);font-size:13px}footer div{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}footer a{color:var(--blue);font-weight:800}
-    @media(max-width:900px){.hero,.offer,.lead-section,.pilot,.deliverable-preview,.final-cta{grid-template-columns:1fr}.proof{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:1fr 1fr}.editor{grid-template-columns:auto 1fr}.editor-note{grid-column:1/-1;border-left:0;border-top:3px solid var(--coral);padding:18px 0 0}.offer{gap:36px}.price-card{max-width:520px}.final-actions{min-width:0;max-width:520px}}
-    @media(max-width:620px){.wrap{padding-left:18px;padding-right:18px}header{height:auto;padding-top:15px;padding-bottom:14px;flex-wrap:wrap}.brand{width:100%}nav{order:3;width:100%;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 14px;font-size:12px}.head-cta{margin-left:auto}.hero{padding-top:32px;padding-bottom:44px;gap:34px}h1{font-size:clamp(38px,11vw,50px);letter-spacing:-2px}.lede{font-size:17px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.proof{grid-template-columns:1fr 1fr}.cards,.example-grid,.included,.fit{grid-template-columns:1fr}.editor{grid-template-columns:1fr;padding:24px 20px}.lead-section{padding:26px 20px}.lead-copy h2{font-size:33px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.preview .preview-actions,.pay-options{grid-template-columns:1fr}footer{align-items:flex-start;flex-direction:column}footer div{margin-left:0}}
+    @media(max-width:900px){.hero,.offer,.lead-section,.pilot,.deliverable-preview,.final-cta,.ecosystem{grid-template-columns:1fr}.proof{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:1fr 1fr}.editor{grid-template-columns:auto 1fr}.editor-note{grid-column:1/-1;border-left:0;border-top:3px solid var(--coral);padding:18px 0 0}.offer{gap:36px}.price-card{max-width:520px}.final-actions{min-width:0;max-width:520px}}
+    @media(max-width:620px){.wrap{padding-left:18px;padding-right:18px}header{height:auto;padding-top:15px;padding-bottom:14px;flex-wrap:wrap}.brand{width:100%}nav{order:3;width:100%;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 14px;font-size:12px}.head-cta{margin-left:auto}.hero{padding-top:32px;padding-bottom:44px;gap:34px}h1{font-size:clamp(38px,11vw,50px);letter-spacing:-2px}.lede{font-size:17px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.proof{grid-template-columns:1fr 1fr}.cards,.example-grid,.included,.fit,.ecosystem-grid{grid-template-columns:1fr}.editor{grid-template-columns:1fr;padding:24px 20px}.lead-section{padding:26px 20px}.lead-copy h2{font-size:33px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.preview .preview-actions,.pay-options{grid-template-columns:1fr}footer{align-items:flex-start;flex-direction:column}footer div{margin-left:0}}
   </style>
 </head>
 <body>
@@ -122,6 +134,30 @@
       <div class="final-actions"><a class="btn" href="#solicitud">Solicitar revisión de encaje →</a><a class="pay-option" href="https://checkout.bold.co/payment/LNK_C69QRTFDY5" target="_blank" rel="noopener noreferrer">Ya confirmé encaje · pagar COP 70.000</a><a class="pay-option" href="https://zssjhpogljzxvfukesgf.supabase.co/functions/v1/mindshock-entry-paypal" target="_blank" rel="noopener noreferrer">Ya confirmé encaje · pagar USD 22</a></div>
     </div>
   </section>
+
+  <section class="wrap" id="ecosistema">
+    <div class="ecosystem">
+      <div>
+        <p class="kicker">Ecosistema B2B</p>
+        <h2>Dos problemas distintos. Dos ofertas separadas.</h2>
+        <p>MindShock se concentra en evidencia comercial: qué historia puede sostenerse y qué no conviene afirmar. Si el problema aparece antes —porque el proceso todavía depende de memoria, improvisación o responsables poco claros— una iniciativa relacionada puede ser más adecuada.</p>
+        <p class="ecosystem-disclosure"><strong>Transparencia:</strong> MindShock y OrdenaOps son iniciativas relacionadas. No se presentan como clientes independientes entre sí y contratar una no obliga a contratar la otra.</p>
+      </div>
+      <div class="ecosystem-grid">
+        <article class="ecosystem-card current">
+          <strong>MindShock</strong>
+          <span>Cuando ya existe trabajo real y necesitas convertir evidencia autorizada en un ángulo comercial defendible.</span>
+          <a href="#solicitud">Revisar un caso →</a>
+        </article>
+        <article class="ecosystem-card">
+          <strong>OrdenaOps</strong>
+          <span>Cuando el problema principal es que un proceso operativo o comercial todavía no está claro, trazable o listo para repetirse.</span>
+          <a href="https://davidrodriguezsep22-oss.github.io/ordenaops/" target="_blank" rel="noopener noreferrer">Ver Mapa Operativo B2B →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
 </main>
 <footer class="wrap"><a class="brand" href="#inicio">MindShock<b>.</b></a><span>Mapas de casos comerciales B2B con revisión humana.</span><div><a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a><a href="/privacidad.html">Privacidad</a><a href="/terminos.html">Términos</a><span>© 2026 MindShock</span></div></footer>
 <script>
