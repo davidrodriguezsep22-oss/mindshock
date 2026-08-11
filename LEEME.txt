@@ -1,17 +1,24 @@
-MINDShock - Página web mejorada
+MINDSHOCK — ARCHIVOS LISTOS PARA SUBIR
+Actualizado: 11 de agosto de 2026
 
-Contenido:
-- index.html: página completa mejorada, con estilos, formulario y conexión a Supabase integrados.
+Sube estos 3 archivos al repositorio:
+davidrodriguezsep22-oss/mindshock
 
-Cómo subirla a GitHub:
-1. Descomprime este archivo ZIP.
-2. Abre el repositorio mindshock.
-3. Pulsa Add file > Upload files.
-4. Arrastra el archivo index.html.
-5. GitHub debe reemplazar el index.html existente.
-6. Confirma Commit directly to the main branch.
-7. Pulsa Commit changes.
+1. index.html
+2. privacidad.html
+3. terminos.html
 
-Importante:
-El index.html actual del repositorio solo redirige a chatgpt.site.
-Para que mindshock.app muestre directamente la página mejorada, sí es necesario reemplazar ese index.html.
+Los tres deben reemplazar los archivos existentes con el mismo nombre.
+
+Cambios principales:
+- MindShock queda completamente independiente.
+- Eliminadas todas las referencias a PrismaOps y OrdenaOps.
+- Eliminado el piloto relacionado y cualquier prueba basada en una empresa relacionada.
+- La muestra del entregable es ahora ilustrativa y no representa a un cliente.
+- Privacidad actualizada al Mapa de Caso Comercial B2B.
+- Términos alineados con la oferta actual y las tres condiciones de inicio.
+- Bold, PayPal y pilot-application permanecen configurados en index.html.
+- Se añadió enlace visible a la SIC para protección al consumidor.
+
+Commit sugerido:
+Make MindShock fully independent and align legal pages
