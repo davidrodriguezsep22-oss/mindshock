@@ -1,16 +1,42 @@
-MINDShock — actualización preparada
+MINDSHOCK — PAQUETE FINAL PARA PROSPECCIÓN
 
-1. Descomprime el ZIP.
-2. Abre el repositorio davidrodriguezsep22-oss/mindshock en GitHub.
-3. Pulsa Add file > Upload files.
-4. Arrastra TODO el contenido de la carpeta descomprimida, conservando las carpetas.
-5. Confirma Commit directly to main y pulsa Commit changes.
+Repositorio:
+davidrodriguezsep22-oss/mindshock
+Rama: main
 
-Resultado:
-- index.html reemplaza la página pública y elimina el código Sandbox.
-- pago.html queda reservado para clientes reales aprobados.
-- pruebas/paypal-sandbox.html conserva las pruebas separadas.
-- robots.txt impide que las páginas privadas se indexen.
-- supabase/functions guarda una copia del código de las funciones.
+Sube estos archivos a la raíz del repositorio:
 
-No subas Client Secret, contraseñas ni claves privadas a GitHub.
+REEMPLAZAR:
+- index.html
+- terminos.html
+- privacidad.html
+- README.md
+- sitemap.xml
+
+AÑADIR:
+- muestra-mapa-mindshock.pdf
+
+No elimines:
+- CNAME
+- robots.txt
+- 404.html
+- assets/
+
+Después de subir:
+1. Espera a que GitHub Pages publique el commit.
+2. Abre https://mindshock.app/ y haz recarga forzada.
+3. Confirma que “Ver muestra completa en PDF” abre /muestra-mapa-mindshock.pdf.
+4. Confirma que el formulario muestra Proyecto / Comprador / Objeción por separado.
+5. Confirma que Términos y Privacidad abren correctamente.
+6. Prueba Bold hasta la pantalla de checkout sin pagar.
+7. Prueba PayPal hasta la pantalla de checkout sin pagar.
+
+CAMBIOS CLAVE:
+- Entrega definida: PDF por correo, normalmente 2–4 páginas.
+- Revisión previa del material: máximo 1 día hábil.
+- Material insuficiente: no inicia; complementar o cancelar con devolución antes del inicio.
+- 1 corrección razonable incluida dentro de 3 días calendario después de la entrega.
+- Muestra ficticia completa en PDF.
+- Formulario dividido en Proyecto / Comprador / Objeción.
+- Nota de checkouts externos y validación de importes.
+- Términos, privacidad, README y sitemap alineados con la oferta.
