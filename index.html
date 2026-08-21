@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="msvalidate.01" content="710FA25963072CFA2C6D157453699BC3">
   <meta name="google-site-verification" content="u7Q8YL7Hp_2yW8QAH_buUgidDiz3rBVsrr8poCIQfBY">
-  <title>MindShock Operaciones Express | Automatización en 48 horas</title>
-  <meta name="description" content="Automatizamos una tarea repetitiva de Excel, PDF, formularios o reportes en 48 horas. Revisión de viabilidad gratis y operación 100% por correo. COP 150.000.">
+  <title>MindShock Operaciones Express | Prueba tu archivo con IA</title>
+  <meta name="description" content="Prueba cómo un PDF o Excel puede convertirse en una tabla limpia. Demostración limitada con IA y automatización completa en 48 horas por COP 150.000.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#090c12">
   <link rel="canonical" href="https://mindshock.app/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="MindShock Operaciones Express">
-  <meta property="og:description" content="Una tarea repetitiva menos en 48 horas. Automatización puntual por COP 150.000, sin llamadas ni reuniones.">
+  <meta property="og:description" content="Sube una muestra anonimizada y comprueba cómo MindShock organiza un PDF o Excel antes de solicitar tu automatización en 48 horas.">
   <meta property="og:url" content="https://mindshock.app/">
   <script type="application/ld+json">
   {
@@ -606,6 +606,148 @@
     .form-status.error { color: #a8382a; font-weight: 800; }
     .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+    .demo-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 8% 15%, rgba(108, 231, 255, .12), transparent 28%),
+        radial-gradient(circle at 92% 90%, rgba(199, 255, 74, .09), transparent 30%),
+        var(--night);
+      color: var(--white);
+    }
+    .demo-section::before {
+      content: "DEMO";
+      position: absolute;
+      right: -25px;
+      top: 8px;
+      color: rgba(255, 255, 255, .025);
+      font-size: 190px;
+      font-weight: 950;
+      letter-spacing: -.08em;
+      pointer-events: none;
+    }
+    .demo-grid { position: relative; display: grid; grid-template-columns: .78fr 1.22fr; gap: 58px; align-items: start; }
+    .demo-section .section-kicker { color: var(--lime); }
+    .demo-section .section-intro { color: var(--muted-dark); }
+    .demo-points { display: grid; gap: 12px; margin-top: 31px; }
+    .demo-point {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line-dark);
+    }
+    .demo-point b {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #526134;
+      border-radius: 8px;
+      color: var(--lime);
+      font-family: Consolas, monospace;
+      font-size: 11px;
+    }
+    .demo-point strong { display: block; font-size: 14px; }
+    .demo-point span { display: block; margin-top: 4px; color: #8591a2; font-size: 12px; line-height: 1.5; }
+    .demo-workbench {
+      overflow: hidden;
+      border: 1px solid #344051;
+      border-radius: 22px;
+      background: #101620;
+      box-shadow: 0 34px 90px rgba(0, 0, 0, .38);
+    }
+    .demo-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 19px;
+      border-bottom: 1px solid var(--line-dark);
+      color: #7f8b9b;
+      font-family: Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .demo-toolbar span:last-child { color: var(--lime); }
+    .demo-form { display: grid; gap: 17px; padding: 24px; }
+    .upload-zone {
+      min-height: 164px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      border: 1px dashed #566274;
+      border-radius: 14px;
+      background: #0d131c;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s ease, background .2s ease;
+    }
+    .upload-zone:hover, .upload-zone.dragging { border-color: var(--cyan); background: #101b26; }
+    .upload-zone.has-file { border-style: solid; border-color: #5d7132; background: #111b17; }
+    .upload-zone input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+    .upload-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 12px;
+      border: 1px solid #3f4b5b;
+      border-radius: 12px;
+      color: var(--cyan);
+      font-family: Consolas, monospace;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .upload-zone strong, .upload-zone span { display: block; }
+    .upload-zone strong { color: #e4eaf1; font-size: 15px; }
+    .upload-zone span { margin-top: 7px; color: #778496; font-size: 11px; line-height: 1.45; }
+    .demo-field { display: grid; gap: 8px; }
+    .demo-field label { color: #dce3ec; font-size: 12px; font-weight: 850; }
+    .demo-field input {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #3c4858;
+      border-radius: 9px;
+      background: #0d131c;
+      color: var(--white);
+    }
+    .demo-field input::placeholder { color: #667386; }
+    .demo-field input:focus { border-color: var(--cyan); outline: 3px solid rgba(108, 231, 255, .12); }
+    .demo-consent { color: #8f9bab; }
+    .demo-consent a { color: var(--cyan); }
+    .demo-form .button { width: 100%; border: 0; cursor: pointer; }
+    .demo-form .button:disabled { opacity: .55; cursor: wait; transform: none; }
+    .demo-status { min-height: 21px; margin: -3px 0 0; color: #8d99a9; font-size: 12px; line-height: 1.5; }
+    .demo-status.error { color: #ff9c8c; font-weight: 800; }
+    .demo-status.success { color: var(--lime); font-weight: 800; }
+    .demo-result { display: none; border-top: 1px solid var(--line-dark); background: #0c1119; }
+    .demo-result.visible { display: block; }
+    .result-head { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: start; padding: 23px 24px; }
+    .result-label { color: var(--lime); font-family: Consolas, monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .result-head h3 { margin: 7px 0 6px; color: var(--white); font-size: 24px; letter-spacing: -.035em; }
+    .result-head p { margin: 0; color: #8e9aab; font-size: 13px; line-height: 1.55; }
+    .result-check { padding: 7px 10px; border: 1px solid #526134; border-radius: 999px; color: var(--lime); font-size: 10px; white-space: nowrap; }
+    .result-table-wrap { overflow-x: auto; border-block: 1px solid var(--line-dark); }
+    .result-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .result-table th, .result-table td { min-width: 120px; padding: 11px 13px; border-right: 1px solid #283241; border-bottom: 1px solid #232d3a; text-align: left; vertical-align: top; }
+    .result-table th { background: #151d28; color: #dfe6ef; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+    .result-table td { color: #9eabba; }
+    .result-table tr:last-child td { border-bottom: 0; }
+    .result-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 22px 24px; }
+    .result-block { padding: 16px; border: 1px solid #293442; border-radius: 12px; background: #111822; }
+    .result-block h4 { margin: 0 0 11px; color: #dfe6ef; font-size: 12px; }
+    .result-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .result-list li { color: #8f9cad; font-size: 11px; line-height: 1.5; }
+    .result-list li.attention { color: #ffab9e; }
+    .result-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 24px 24px; }
+    .result-actions .button { min-height: 44px; padding: 11px 14px; font-size: 12px; }
+    .result-actions .button.secondary { border-color: #3d4a5a; background: transparent; color: #dce4ed; box-shadow: none; }
+    .result-actions .button.secondary::after { content: "↓"; color: var(--cyan); }
+    .result-privacy { margin: -8px 24px 22px; color: #687589; font-size: 10px; line-height: 1.5; }
+
     .faq-section { background: var(--paper); }
     .faq-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 70px; }
     .faq-list { display: grid; gap: 9px; }
@@ -646,7 +788,7 @@
       .shell { width: min(100% - 36px, 760px); }
       nav a:not(.nav-cta) { display: none; }
       .hero { min-height: auto; padding-top: 132px; }
-      .hero-grid, .offer-grid, .review-grid, .faq-layout { grid-template-columns: 1fr; }
+      .hero-grid, .demo-grid, .offer-grid, .review-grid, .faq-layout { grid-template-columns: 1fr; }
       .hero-grid { gap: 56px; }
       .ops-window { max-width: 610px; transform: none; }
       .example-grid { grid-template-columns: 1fr; }
@@ -654,6 +796,7 @@
       .timeline { grid-template-columns: 1fr 1fr; gap: 34px 18px; }
       .timeline::before { display: none; }
       .offer-grid { gap: 42px; }
+      .demo-grid { gap: 42px; }
       .price-card { position: static; max-width: 560px; }
       .review-grid, .faq-layout { gap: 40px; }
     }
@@ -691,6 +834,11 @@
       .price { font-size: 51px; }
       .split-pay { grid-template-columns: 1fr; }
       .lead-form { padding: 23px 19px; }
+      .demo-form { padding: 19px; }
+      .result-head { grid-template-columns: 1fr; }
+      .result-meta { grid-template-columns: 1fr; padding: 18px 19px; }
+      .result-actions { padding: 0 19px 20px; }
+      .result-privacy { margin-inline: 19px; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
       .final-inner { grid-template-columns: 1fr; padding: 32px 25px; }
@@ -734,10 +882,10 @@
       </a>
       <span class="header-tag">Operaciones Express</span>
       <nav aria-label="Navegación principal">
+        <a href="#demo">Prueba real</a>
         <a href="#ejemplos">Qué resolvemos</a>
         <a href="#proceso">Cómo funciona</a>
         <a href="#precio">Precio</a>
-        <a href="#preguntas">Preguntas</a>
         <a class="nav-cta" href="#revision">Revisión gratis</a>
       </nav>
     </div>
@@ -747,19 +895,19 @@
     <section class="hero" id="inicio">
       <div class="shell hero-grid">
         <div>
-          <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Automatización puntual · 100% por correo</p>
-          <h1>El trabajo repetitivo no debería llegar a <span>mañana.</span></h1>
-          <p class="hero-lede">Convertimos una tarea manual de <strong>Excel, PDF, formularios o reportes</strong> en una herramienta simple que trabaja por ti. Alcance cerrado, entrega en 48 horas y cero reuniones.</p>
+          <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Prueba real · PDF o Excel · resultado inmediato</p>
+          <h1>De archivo manual a <span>tabla útil.</span></h1>
+          <p class="hero-lede">Prueba con una muestra anonimizada cómo la IA puede <strong>extraer, ordenar y revisar</strong> un PDF o Excel. Si funciona para tu proceso, construimos la automatización completa en 48 horas.</p>
           <div class="actions">
-            <a class="button" href="#revision">Revisar mi proceso gratis</a>
-            <a class="button ghost" href="#ejemplos">Ver qué podemos automatizar</a>
+            <a class="button" href="#demo">Probar con un archivo</a>
+            <a class="button ghost" href="#revision">Validar el proceso por correo</a>
           </div>
-          <p class="hero-note">Primero comprobamos el encaje. Solo pagas después de recibir un alcance claro por correo.</p>
+          <p class="hero-note">No uses información confidencial. La demostración no guarda tu archivo ni el resultado.</p>
           <div class="hero-metrics" aria-label="Datos principales del servicio">
-            <div class="metric"><strong>48 h</strong><span>Entrega</span></div>
-            <div class="metric"><strong>COP 150k</strong><span>Precio total</span></div>
-            <div class="metric"><strong>1 tarea</strong><span>Alcance cerrado</span></div>
-            <div class="metric"><strong>0 llamadas</strong><span>Todo por correo</span></div>
+            <div class="metric"><strong>1 prueba</strong><span>Gratis por día</span></div>
+            <div class="metric"><strong>2 MB</strong><span>Muestra máxima</span></div>
+            <div class="metric"><strong>0 archivos</strong><span>Guardados</span></div>
+            <div class="metric"><strong>48 h</strong><span>Automatización</span></div>
           </div>
         </div>
 
@@ -794,6 +942,81 @@
         <span>Excel</span><span>PDF a tabla</span><span>Reportes</span><span>Formularios</span><span>Correos automáticos</span><span>Archivos repetitivos</span>
       </div>
     </div>
+
+    <section class="demo-section" id="demo">
+      <div class="shell demo-grid">
+        <div>
+          <p class="section-kicker">00 / Demostración con IA</p>
+          <h2 class="section-title">Comprueba el resultado antes de explicar todo el proyecto.</h2>
+          <p class="section-intro">Carga una muestra sin datos confidenciales. Verás hasta ocho registros organizados, totales visibles y alertas que conviene revisar.</p>
+          <div class="demo-points">
+            <div class="demo-point"><b>01</b><div><strong>PDF, CSV o Excel</strong><span>Una muestra de máximo 2 MB y hasta 1.000 filas analizadas por hoja.</span></div></div>
+            <div class="demo-point"><b>02</b><div><strong>Sin guardar el contenido</strong><span>MindShock no conserva el archivo ni el resultado de la demostración.</span></div></div>
+            <div class="demo-point"><b>03</b><div><strong>Una prueba diaria</strong><span>El límite protege los créditos y mantiene disponible la herramienta.</span></div></div>
+          </div>
+        </div>
+
+        <div class="demo-workbench">
+          <div class="demo-toolbar"><span>Extractor Contable Express / beta</span><span>En línea</span></div>
+          <form class="demo-form" id="demo-form">
+            <label class="upload-zone" id="upload-zone" for="demo-file">
+              <input id="demo-file" name="file" type="file" accept=".pdf,.csv,.tsv,.xls,.xlsx" required>
+              <span>
+                <span class="upload-icon" id="upload-icon">PDF</span>
+                <strong id="upload-title">Selecciona o arrastra una muestra</strong>
+                <span id="upload-detail">PDF, CSV, XLS o XLSX · máximo 2 MB · sin información confidencial</span>
+              </span>
+            </label>
+            <div class="demo-field">
+              <label for="demo-objective">¿Qué resultado necesitas? <span aria-hidden="true">·</span> opcional</label>
+              <input id="demo-objective" name="objective" maxlength="300" placeholder="Ej.: extraer número, fecha, proveedor, subtotal, IVA y total">
+            </div>
+            <label class="checkbox demo-consent">
+              <input id="demo-consent" name="consent" type="checkbox" value="accepted" required>
+              <span>Confirmo que el archivo es propio o autorizado, está anonimizado y acepto que OpenAI lo procese para generar esta demostración. He leído la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <button class="button" id="demo-submit" type="submit">Procesar muestra gratis</button>
+            <p class="demo-status" id="demo-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="demo-result" id="demo-result" aria-live="polite">
+            <div class="result-head">
+              <div>
+                <span class="result-label">Vista previa generada</span>
+                <h3 id="result-type">Documento procesado</h3>
+                <p id="result-summary"></p>
+              </div>
+              <span class="result-check">Requiere revisión humana</span>
+            </div>
+            <div class="result-table-wrap">
+              <table class="result-table" id="result-table">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="result-meta">
+              <div class="result-block">
+                <h4>Totales detectados</h4>
+                <ul class="result-list" id="result-totals"></ul>
+              </div>
+              <div class="result-block">
+                <h4>Alertas de revisión</h4>
+                <ul class="result-list" id="result-warnings"></ul>
+              </div>
+            </div>
+            <div class="result-block" style="margin: 0 24px 22px;">
+              <h4>Automatización sugerida</h4>
+              <p id="result-automation" style="margin:0;color:#9eabba;font-size:12px;line-height:1.55;"></p>
+            </div>
+            <div class="result-actions">
+              <a class="button" href="#revision">Solicitar automatización</a>
+              <button class="button secondary" id="download-csv" type="button">Descargar muestra CSV</button>
+            </div>
+            <p class="result-privacy" id="result-note">La vista previa puede contener errores. Verifica los datos contra el documento original antes de usarlos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="ejemplos">
       <div class="shell">
@@ -952,13 +1175,13 @@
               <input id="lead-company" name="agency" autocomplete="organization" maxlength="120" required>
             </div>
             <div class="field">
-              <label for="lead-frequency">¿Con qué frecuencia se repite?</label>
+              <label for="lead-frequency">¿Cuántas veces se repite al mes?</label>
               <select id="lead-frequency" name="clientCount" required>
                 <option value="">Selecciona</option>
-                <option>Todos los días</option>
-                <option>Varias veces por semana</option>
-                <option>Varias veces al mes</option>
-                <option>Ocasionalmente</option>
+                <option value="En validación / sin clientes externos">Aún estoy validando la tarea</option>
+                <option value="1–3">1–3 veces</option>
+                <option value="4–10">4–10 veces</option>
+                <option value="Más de 10">Más de 10 veces</option>
               </select>
             </div>
             <div class="field full">
@@ -1061,6 +1284,239 @@
 
   <script>
     (() => {
+      const form = document.getElementById('demo-form');
+      if (!form) return;
+
+      const endpoint = 'https://zssjhpogljzxvfukesgf.supabase.co/functions/v1/express-demo';
+      const maxFileBytes = 2_000_000;
+      const acceptedExtensions = ['pdf', 'csv', 'tsv', 'xls', 'xlsx'];
+      const fileInput = document.getElementById('demo-file');
+      const uploadZone = document.getElementById('upload-zone');
+      const uploadIcon = document.getElementById('upload-icon');
+      const uploadTitle = document.getElementById('upload-title');
+      const uploadDetail = document.getElementById('upload-detail');
+      const objective = document.getElementById('demo-objective');
+      const consent = document.getElementById('demo-consent');
+      const button = document.getElementById('demo-submit');
+      const status = document.getElementById('demo-status');
+      const resultPanel = document.getElementById('demo-result');
+      const downloadButton = document.getElementById('download-csv');
+      let selectedFile = null;
+      let currentResult = null;
+
+      const extensionOf = (name) => name.split('.').pop().toLowerCase();
+      const formatSize = (bytes) => bytes < 1_000_000
+        ? `${Math.max(1, Math.round(bytes / 1000))} KB`
+        : `${(bytes / 1_000_000).toFixed(1)} MB`;
+
+      function setStatus(message, type = '') {
+        status.textContent = message;
+        status.className = `demo-status${type ? ` ${type}` : ''}`;
+      }
+
+      function selectFile(file) {
+        if (!file) return;
+        const extension = extensionOf(file.name);
+        if (!acceptedExtensions.includes(extension)) {
+          selectedFile = null;
+          setStatus('Usa un archivo PDF, CSV, TSV, XLS o XLSX.', 'error');
+          return;
+        }
+        if (file.size < 20 || file.size > maxFileBytes) {
+          selectedFile = null;
+          setStatus('La muestra debe pesar menos de 2 MB.', 'error');
+          return;
+        }
+
+        selectedFile = file;
+        uploadZone.classList.add('has-file');
+        uploadIcon.textContent = extension.toUpperCase();
+        uploadTitle.textContent = file.name;
+        uploadDetail.textContent = `${formatSize(file.size)} · listo para procesar`;
+        setStatus('');
+      }
+
+      fileInput.addEventListener('change', () => selectFile(fileInput.files[0]));
+
+      ['dragenter', 'dragover'].forEach((eventName) => {
+        uploadZone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          uploadZone.classList.add('dragging');
+        });
+      });
+      ['dragleave', 'drop'].forEach((eventName) => {
+        uploadZone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          uploadZone.classList.remove('dragging');
+        });
+      });
+      uploadZone.addEventListener('drop', (event) => {
+        const file = event.dataTransfer.files[0];
+        if (!file) return;
+        try {
+          const transfer = new DataTransfer();
+          transfer.items.add(file);
+          fileInput.files = transfer.files;
+        } catch (_) {
+          // selectedFile is enough in browsers that do not allow assigning FileList.
+        }
+        selectFile(file);
+      });
+
+      function fillList(element, items, formatter, emptyText) {
+        element.replaceChildren();
+        if (!items.length) {
+          const item = document.createElement('li');
+          item.textContent = emptyText;
+          element.appendChild(item);
+          return;
+        }
+        items.forEach((value) => {
+          const item = document.createElement('li');
+          item.textContent = formatter(value);
+          if (value.severity === 'attention') item.classList.add('attention');
+          element.appendChild(item);
+        });
+      }
+
+      function renderResult(result) {
+        currentResult = result;
+        document.getElementById('result-type').textContent = result.document_type || 'Documento procesado';
+        document.getElementById('result-summary').textContent = result.document_summary || 'Vista previa generada.';
+        document.getElementById('result-automation').textContent = result.automation_hint || 'Podemos definir una salida repetible a partir de esta estructura.';
+        document.getElementById('result-note').textContent = result.review_note || 'La vista previa puede contener errores. Verifica los datos contra el documento original antes de usarlos.';
+
+        const columns = Array.isArray(result.detected_columns) ? result.detected_columns.slice(0, 8) : [];
+        const records = Array.isArray(result.records) ? result.records.slice(0, 8) : [];
+        const table = document.getElementById('result-table');
+        const headRow = document.createElement('tr');
+        columns.forEach((column) => {
+          const cell = document.createElement('th');
+          cell.scope = 'col';
+          cell.textContent = column;
+          headRow.appendChild(cell);
+        });
+        table.tHead.replaceChildren(headRow);
+        table.tBodies[0].replaceChildren();
+
+        records.forEach((record) => {
+          const values = new Map((record.cells || []).map((cell) => [cell.column, cell.value]));
+          const row = document.createElement('tr');
+          columns.forEach((column) => {
+            const cell = document.createElement('td');
+            cell.textContent = values.get(column) || '—';
+            row.appendChild(cell);
+          });
+          table.tBodies[0].appendChild(row);
+        });
+
+        if (!columns.length || !records.length) {
+          const row = document.createElement('tr');
+          const cell = document.createElement('td');
+          cell.colSpan = Math.max(columns.length, 1);
+          cell.textContent = 'No se detectaron filas estructuradas en esta muestra.';
+          row.appendChild(cell);
+          table.tBodies[0].appendChild(row);
+        }
+
+        fillList(
+          document.getElementById('result-totals'),
+          Array.isArray(result.totals) ? result.totals : [],
+          (item) => `${item.label}: ${item.value}`,
+          'No se detectaron totales explícitos.'
+        );
+        fillList(
+          document.getElementById('result-warnings'),
+          Array.isArray(result.warnings) ? result.warnings : [],
+          (item) => item.message,
+          'No se detectaron alertas visibles en la muestra.'
+        );
+
+        resultPanel.classList.add('visible');
+      }
+
+      function errorMessage(code) {
+        const messages = {
+          invalid_file: 'El archivo no cumple los requisitos de la demostración.',
+          file_size: 'La muestra debe pesar menos de 2 MB.',
+          daily_limit: 'Esta conexión ya usó la prueba de hoy. Puedes solicitar la revisión gratuita por correo.',
+          demo_budget_paused: 'La demostración automática llegó a su límite de créditos. La revisión por correo sigue disponible.',
+          processing_failed: 'No fue posible interpretar esta muestra. Prueba un archivo más pequeño o solicita revisión por correo.',
+          server_configuration: 'La demostración está temporalmente en mantenimiento.',
+        };
+        return messages[code] || 'No fue posible procesar la muestra. Inténtalo de nuevo más tarde.';
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!selectedFile) {
+          setStatus('Selecciona primero una muestra válida.', 'error');
+          return;
+        }
+        if (!consent.checked) {
+          setStatus('Confirma la autorización y el uso de una muestra anonimizada.', 'error');
+          consent.focus();
+          return;
+        }
+
+        button.disabled = true;
+        resultPanel.classList.remove('visible');
+        setStatus('Leyendo la muestra y preparando la tabla…');
+
+        try {
+          const fileData = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = () => reject(new Error('file_read_failed'));
+            reader.readAsDataURL(selectedFile);
+          });
+
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              file_name: selectedFile.name,
+              file_data: fileData,
+              objective: objective.value.trim(),
+              consent: 'accepted',
+            }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(payload.error || 'request_failed');
+
+          renderResult(payload.result || {});
+          setStatus('Muestra procesada. Revisa la tabla y las alertas.', 'success');
+          resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (error) {
+          setStatus(errorMessage(error.message), 'error');
+        } finally {
+          button.disabled = false;
+        }
+      });
+
+      downloadButton.addEventListener('click', () => {
+        if (!currentResult) return;
+        const columns = Array.isArray(currentResult.detected_columns) ? currentResult.detected_columns : [];
+        const records = Array.isArray(currentResult.records) ? currentResult.records : [];
+        const escapeCsv = (value) => `"${String(value ?? '').replaceAll('"', '""')}"`;
+        const lines = [columns.map(escapeCsv).join(',')];
+        records.forEach((record) => {
+          const values = new Map((record.cells || []).map((cell) => [cell.column, cell.value]));
+          lines.push(columns.map((column) => escapeCsv(values.get(column) || '')).join(','));
+        });
+        const blob = new Blob([`\uFEFF${lines.join('\r\n')}`], { type: 'text/csv;charset=utf-8' });
+        const downloadUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = 'muestra-mindshock.csv';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+      });
+    })();
+
+    (() => {
       const form = document.getElementById('express-form');
       if (!form) return;
 
@@ -1118,4 +1574,5 @@
   </script>
 </body>
 </html>
+
 
