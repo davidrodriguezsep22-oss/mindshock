@@ -364,10 +364,23 @@
       left: 50%;
       border-left: 1px dashed #3c4756;
     }
-    .process-chip { position: relative; z-index: 1; padding: 8px 11px; border: 1px solid #4d612d; border-radius: 999px; background: #121a18; }
-    .result-card { border-color: #4d612d; background: linear-gradient(135deg, #141d18, #101821); }
+    .process-chip { position: relative; z-index: 1; padding: 8px 11px; border: 1px solid #4d612d; border-radius: 999px; background: #121a18; animation: simulation-process 8s ease-in-out infinite; }
+    .demo-input-card { animation: simulation-input 8s ease-in-out infinite; }
+    .result-card { border-color: #4d612d; background: linear-gradient(135deg, #141d18, #101821); animation: simulation-output 8s ease-in-out infinite; }
     .result-card .file-icon { background: rgba(199, 255, 74, .11); color: var(--lime); }
     .result-card .file-status { color: var(--lime); }
+    @keyframes simulation-input {
+      0%, 12%, 100% { border-color: var(--line-dark); box-shadow: none; }
+      18%, 30% { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(108, 231, 255, .08); }
+    }
+    @keyframes simulation-process {
+      0%, 30%, 65%, 100% { border-color: #4d612d; color: var(--lime); box-shadow: none; }
+      38%, 56% { border-color: var(--lime); color: var(--white); box-shadow: 0 0 24px rgba(199, 255, 74, .2); }
+    }
+    @keyframes simulation-output {
+      0%, 55%, 94%, 100% { box-shadow: none; }
+      64%, 84% { border-color: var(--lime); box-shadow: 0 0 0 4px rgba(199, 255, 74, .08), 0 18px 44px rgba(0, 0, 0, .22); }
+    }
     .window-footer {
       display: flex;
       justify-content: space-between;
@@ -379,6 +392,8 @@
       font-size: 9px;
     }
     .window-footer b { color: var(--lime); }
+    .simulation-caption { margin: 14px 2px 0; color: #7e8a9a; font-size: 10px; line-height: 1.5; }
+    .simulation-caption strong { color: #dfe5ee; }
 
     .ticker { overflow: hidden; border-block: 1px solid var(--night); background: var(--lime); color: var(--night); }
     .ticker-track {
@@ -911,14 +926,14 @@
           </div>
         </div>
 
-        <aside class="ops-window" aria-label="Ejemplo visual de una automatización">
+        <aside class="ops-window" aria-label="Demostración simulada de una automatización">
           <div class="window-bar">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="window-title mono">OPERACIÓN_024 · EN LÍNEA</span>
+            <span class="window-title mono">DEMOSTRACIÓN SIMULADA · 8 S</span>
           </div>
           <div class="flow-panel">
             <span class="flow-label mono">Entrada manual</span>
-            <div class="file-card">
+            <div class="file-card demo-input-card">
               <span class="file-icon mono">XLS</span>
               <div><strong>reportes_semana.zip</strong><span>3 archivos · formatos repetidos</span></div>
               <span class="file-status mono">25 MIN / DÍA</span>
@@ -931,6 +946,7 @@
               <span class="file-status mono">1 CLIC</span>
             </div>
             <div class="window-footer mono"><span>ESTADO: <b>COMPLETO</b></span><span>TIEMPO RECUPERADO: 2H/SEM</span></div>
+            <p class="simulation-caption"><strong>Ejemplo con datos ficticios.</strong> El formato final se confirma por correo antes del anticipo.</p>
           </div>
         </aside>
       </div>
@@ -957,7 +973,7 @@
         </div>
 
         <div class="demo-workbench">
-          <div class="demo-toolbar"><span>Extractor Contable Express / beta</span><span>En línea</span></div>
+          <div class="demo-toolbar"><span>Extractor Contable Express / demo protegida</span><span>En línea</span></div>
           <form class="demo-form" id="demo-form">
             <label class="upload-zone" id="upload-zone" for="demo-file">
               <input id="demo-file" name="file" type="file" accept=".pdf,.csv,.tsv,.xls,.xlsx" required>
@@ -1111,10 +1127,11 @@
           <h2 class="section-title">Un precio claro para una mejora que puedas usar ya.</h2>
           <p class="section-intro">El límite mantiene el proyecto rápido: una automatización concreta, una estructura de entrada y un resultado verificable.</p>
           <div class="offer-points">
-            <div class="offer-point"><b>01</b><div><strong>Herramienta lista para usar</strong><span>Archivo, script o flujo sencillo ajustado al proceso que aprobamos.</span></div></div>
+            <div class="offer-point"><b>01</b><div><strong>La opción más simple para tu equipo</strong><span>Antes de pagar sabrás si recibirás un Excel automatizado, un archivo de un clic o un flujo guiado. No necesitas programar.</span></div></div>
             <div class="offer-point"><b>02</b><div><strong>Guía en tres pasos</strong><span>Cómo ingresar la información, ejecutar el proceso y encontrar el resultado.</span></div></div>
             <div class="offer-point"><b>03</b><div><strong>Una corrección incluida</strong><span>Limitada al alcance acordado y solicitada dentro de los tres días calendario posteriores a la entrega.</span></div></div>
-            <div class="offer-point"><b>04</b><div><strong>Operación por correo</strong><span>Sin WhatsApp, llamadas, videollamadas ni reuniones obligatorias.</span></div></div>
+            <div class="offer-point"><b>04</b><div><strong>Cambios futuros bajo control</strong><span>Si luego cambia el formato de origen, revisamos una nueva muestra y cotizamos el ajuste antes de modificar la herramienta.</span></div></div>
+            <div class="offer-point"><b>05</b><div><strong>Operación por correo</strong><span>Sin WhatsApp, llamadas, videollamadas ni reuniones obligatorias.</span></div></div>
           </div>
         </div>
 
@@ -1133,7 +1150,8 @@
               <li>Revisión de viabilidad sin costo</li>
               <li>Entrega en 48 horas tras activar el proyecto</li>
               <li>Evidencia de funcionamiento antes del saldo</li>
-              <li>Archivo definitivo + guía de uso</li>
+              <li>Formato de entrega confirmado antes del anticipo</li>
+              <li>Herramienta definitiva + guía de uso</li>
               <li>Una corrección dentro de tres días calendario</li>
             </ul>
             <a class="button" href="#revision">Solicitar revisión gratis</a>
@@ -1236,6 +1254,14 @@
           <details>
             <summary>¿Qué cubre la corrección incluida?</summary>
             <p>Una corrección razonable sobre el alcance y la estructura aprobados, solicitada dentro de los tres días calendario siguientes a la entrega. Nuevos formatos, reglas o funciones se cotizan aparte.</p>
+          </details>
+          <details>
+            <summary>¿Necesito saber programar para usar la entrega?</summary>
+            <p>No. Antes del anticipo confirmamos si recibirás un Excel automatizado, un archivo de un clic o un flujo guiado. La opción elegida debe poder operarse con la guía en tres pasos, sin editar código.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si después cambia el formato del PDF o Excel?</summary>
+            <p>Envías una nueva muestra y revisamos el impacto. Si el cambio queda fuera de la estructura aprobada, recibirás una cotización separada antes de que modifiquemos la herramienta.</p>
           </details>
           <details>
             <summary>¿Puedo manejar todo por correo?</summary>
@@ -1574,5 +1600,6 @@
   </script>
 </body>
 </html>
+
 
 
