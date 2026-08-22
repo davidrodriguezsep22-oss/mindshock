@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mindshock.app/</loc><lastmod>2026-08-21</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mindshock.app/</loc><lastmod>2026-08-22</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mindshock.app/rescate-express/</loc><lastmod>2026-08-22</lastmod><priority>0.95</priority></url>
   <url><loc>https://mindshock.app/automatizar-pdf-a-excel/</loc><lastmod>2026-08-21</lastmod><priority>0.9</priority></url>
   <url><loc>https://mindshock.app/extraer-datos-pdf/</loc><lastmod>2026-08-21</lastmod><priority>0.9</priority></url>
   <url><loc>https://mindshock.app/consolidar-archivos-excel/</loc><lastmod>2026-08-21</lastmod><priority>0.9</priority></url>
@@ -8,6 +9,6 @@
   <url><loc>https://mindshock.app/automatizacion-contable/</loc><lastmod>2026-08-21</lastmod><priority>0.9</priority></url>
   <url><loc>https://mindshock.app/en/</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mindshock.app/muestra-mapa-mindshock.pdf</loc><lastmod>2026-08-16</lastmod><priority>0.4</priority></url>
-  <url><loc>https://mindshock.app/privacidad.html</loc><lastmod>2026-08-16</lastmod></url>
-  <url><loc>https://mindshock.app/terminos.html</loc><lastmod>2026-08-16</lastmod></url>
+  <url><loc>https://mindshock.app/privacidad.html</loc><lastmod>2026-08-22</lastmod></url>
+  <url><loc>https://mindshock.app/terminos.html</loc><lastmod>2026-08-22</lastmod></url>
 </urlset>
