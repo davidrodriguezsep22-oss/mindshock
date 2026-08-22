@@ -76,6 +76,18 @@
   window.mindshockTrack = track;
   track('page_view');
 
+  if (location.pathname === '/' || location.pathname === '/index.html') {
+    const actions = document.querySelector('.hero .actions');
+    if (actions && !actions.querySelector('[data-rescue-entry]')) {
+      const rescueLink = document.createElement('a');
+      rescueLink.href = '/rescate-express/';
+      rescueLink.className = 'button ghost';
+      rescueLink.dataset.rescueEntry = 'true';
+      rescueLink.textContent = 'Rescate de archivo · $49.000';
+      actions.appendChild(rescueLink);
+    }
+  }
+
   document.addEventListener('click', (event) => {
     const anchor = event.target.closest?.('a[href]');
     if (!anchor) return;
