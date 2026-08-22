@@ -137,3 +137,12 @@
     }).observe(reviewStatus, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
   }
 })();
+
+(() => {
+  if (document.querySelector('script[data-mindshock-conversion-upgrades]')) return;
+  const script = document.createElement('script');
+  script.src = '/conversion-upgrades.js?v=20260822';
+  script.defer = true;
+  script.dataset.mindshockConversionUpgrades = '1';
+  document.head.appendChild(script);
+})();
