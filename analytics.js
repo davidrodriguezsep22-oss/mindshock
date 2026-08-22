@@ -144,5 +144,13 @@
   script.src = '/conversion-upgrades.js?v=20260822-2';
   script.defer = true;
   script.dataset.mindshockConversionUpgrades = '1';
+  script.onload = () => {
+    if (document.querySelector('script[data-mindshock-public-sales-email]')) return;
+    const publicSalesEmail = document.createElement('script');
+    publicSalesEmail.src = '/public-sales-email.js?v=20260822';
+    publicSalesEmail.defer = true;
+    publicSalesEmail.dataset.mindshockPublicSalesEmail = '1';
+    document.head.appendChild(publicSalesEmail);
+  };
   document.head.appendChild(script);
 })();
