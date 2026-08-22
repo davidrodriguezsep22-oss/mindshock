@@ -77,10 +77,18 @@
   track('page_view');
 
   document.addEventListener('click', (event) => {
-    const anchor = event.target.closest?.('a[href="#revision"]');
+    const anchor = event.target.closest?.('a[href]');
     if (!anchor) return;
-    if (anchor.closest('#demo-result')) track('post_demo_validate_click');
-    else track('validate_click');
+    let target;
+    try { target = new URL(anchor.href, location.href); } catch (_) { return; }
+    if (target.origin !== location.origin) return;
+
+    if (target.hash === '#revision') {
+      if (anchor.closest('#demo-result')) track('post_demo_validate_click');
+      else track('validate_click');
+    } else if (target.hash === '#demo') {
+      track('demo_click');
+    }
   }, { passive: true });
 
   const demoForm = document.getElementById('demo-form');
