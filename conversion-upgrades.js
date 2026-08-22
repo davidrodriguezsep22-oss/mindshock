@@ -1,5 +1,15 @@
 (() => {
   const path = location.pathname.replace(/\/+$/, '') || '/';
+  const salesEmail = 'davidrodriguezsep22@gmail.com';
+  const oldSalesEmail = 'ventas@mindshock.app';
+
+  document.querySelectorAll(`a[href^="mailto:${oldSalesEmail}"]`).forEach((anchor) => {
+    anchor.href = anchor.href.replace(oldSalesEmail, salesEmail);
+    if ((anchor.textContent || '').trim() === oldSalesEmail) anchor.textContent = salesEmail;
+  });
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    if (script.textContent?.includes(oldSalesEmail)) script.textContent = script.textContent.replaceAll(oldSalesEmail, salesEmail);
+  });
 
   const style = document.createElement('style');
   style.textContent = `
@@ -34,9 +44,9 @@
       <div class="ms-trust-shell">
         <p class="ms-trust-kicker">${isRescue ? 'Confianza antes de pagar' : 'Quién está detrás del servicio'}</p>
         <h2 class="ms-trust-title">${isRescue ? 'Sabes qué pasa antes y después de enviar tu solicitud.' : 'Una marca nueva debe ganarse la confianza con reglas claras.'}</h2>
-        <p class="ms-trust-intro">MindShock es un servicio digital coordinado desde Colombia. El canal comercial y operativo publicado es <a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a>. El alcance, el precio, los insumos y cualquier dependencia externa se confirman por escrito antes de solicitar pago.</p>
+        <p class="ms-trust-intro">MindShock es un servicio digital coordinado desde Colombia. El canal comercial y operativo que podemos atender directamente es <a href="mailto:${salesEmail}">${salesEmail}</a>. El alcance, el precio, los insumos y cualquier dependencia externa se confirman por escrito antes de solicitar pago.</p>
         <div class="ms-trust-grid">
-          <div class="ms-trust-card"><strong>Canal comercial verificable</strong><p>La solicitud llega a MindShock y la coordinación continúa por el mismo correo corporativo publicado en la web, los Términos y la Política de privacidad.</p></div>
+          <div class="ms-trust-card"><strong>Canal comercial atendido</strong><p>La coordinación continúa por el correo de ventas que los agentes de MindShock pueden revisar y responder directamente.</p></div>
           <div class="ms-trust-card"><strong>Sin testimonios inventados</strong><p>Los ejemplos actuales están marcados como demostrativos. Un caso de cliente solo se publicará cuando exista una experiencia real y autorización suficiente.</p></div>
         </div>
         <div class="ms-flow" aria-label="Qué ocurre después de enviar una solicitud">
@@ -47,7 +57,7 @@
           <div class="ms-flow-step"><b>05 · Empezamos</b><span>Solo con las condiciones de inicio ya confirmadas.</span></div>
         </div>
         <div class="ms-protection"><strong>Protección de cumplimiento:</strong> si una causa atribuible a MindShock impide cumplir materialmente un servicio ya pagado y no es posible corregirlo para cumplir el alcance acordado, se devuelve el importe recibido por ese servicio, sin limitar los derechos obligatorios que correspondan.</div>
-        <p class="ms-identity-line">Colombia · <a href="mailto:ventas@mindshock.app">ventas@mindshock.app</a> · <a href="/terminos.html">Términos</a> · <a href="/privacidad.html">Privacidad</a></p>
+        <p class="ms-identity-line">Colombia · <a href="mailto:${salesEmail}">${salesEmail}</a> · <a href="/terminos.html">Términos</a> · <a href="/privacidad.html">Privacidad</a></p>
       </div>`;
     return section;
   }
@@ -85,7 +95,7 @@
     }
 
     improveSuccess(document.getElementById('form-status'), () =>
-      'Solicitud recibida. Siguiente paso: revisaremos el encaje y te responderemos por correo con el alcance, los insumos, las dependencias, las condiciones que activan las 48 horas y el precio confirmado. No se ha realizado ningún cobro.'
+      `Solicitud recibida. Siguiente paso: revisaremos el encaje y te responderemos desde ${salesEmail} con el alcance, los insumos, las dependencias, las condiciones que activan las 48 horas y el precio confirmado. No se ha realizado ningún cobro.`
     );
   }
 
@@ -98,7 +108,7 @@
     improveSuccess(document.getElementById('rescue-status'), (current) => {
       const idMatch = current.match(/\(#\d+\)/);
       const id = idMatch ? ` ${idMatch[0]}` : '';
-      return `Solicitud recibida${id}. Siguiente paso: revisaremos si Rescate Express es la opción correcta y te responderemos por correo con resultado esperado, archivos necesarios, plazo, precio y exclusiones. Solo después decides si pagas.`;
+      return `Solicitud recibida${id}. Siguiente paso: revisaremos si Rescate Express es la opción correcta y te responderemos desde ${salesEmail} con resultado esperado, archivos necesarios, plazo, precio y exclusiones. Solo después decides si pagas.`;
     });
   }
 })();
