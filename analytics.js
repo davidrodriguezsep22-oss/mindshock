@@ -27,14 +27,22 @@
   }
 
   const params = new URLSearchParams(location.search);
+  const incomingCampaign = {
+    utm_source: params.get('utm_source') || null,
+    utm_medium: params.get('utm_medium') || null,
+    utm_campaign: params.get('utm_campaign') || null,
+    utm_content: params.get('utm_content') || null,
+    utm_term: params.get('utm_term') || null,
+  };
+  const hasIncomingCampaign = Object.values(incomingCampaign).some(Boolean);
+
   let campaign = null;
   try { campaign = JSON.parse(safeSessionGet(campaignKey) || 'null'); } catch (_) { campaign = null; }
-  if (!campaign) {
-    campaign = {
-      utm_source: params.get('utm_source') || null,
-      utm_medium: params.get('utm_medium') || null,
-      utm_campaign: params.get('utm_campaign') || null,
-    };
+  if (hasIncomingCampaign) {
+    campaign = incomingCampaign;
+    safeSessionSet(campaignKey, JSON.stringify(campaign));
+  } else if (!campaign) {
+    campaign = incomingCampaign;
     safeSessionSet(campaignKey, JSON.stringify(campaign));
   }
 
@@ -52,6 +60,8 @@
       utm_source: campaign?.utm_source || null,
       utm_medium: campaign?.utm_medium || null,
       utm_campaign: campaign?.utm_campaign || null,
+      utm_content: campaign?.utm_content || null,
+      utm_term: campaign?.utm_term || null,
     };
 
     fetch(endpoint, {
