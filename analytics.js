@@ -75,13 +75,19 @@
 
   const demoForm = document.getElementById('demo-form');
   const demoStatus = document.getElementById('demo-status');
-  if (demoForm) demoForm.addEventListener('submit', () => track('demo_start'));
+  let demoSubmitted = false;
+  if (demoForm) {
+    demoForm.addEventListener('submit', () => {
+      demoSubmitted = true;
+      track('demo_start');
+    });
+  }
   if (demoStatus) {
-    let lastDemoState = '';
     new MutationObserver(() => {
+      if (!demoSubmitted) return;
       const state = demoStatus.classList.contains('success') ? 'success' : demoStatus.classList.contains('error') ? 'error' : '';
-      if (!state || state === lastDemoState) return;
-      lastDemoState = state;
+      if (!state) return;
+      demoSubmitted = false;
       track(state === 'success' ? 'demo_complete' : 'demo_fail');
     }).observe(demoStatus, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
   }
